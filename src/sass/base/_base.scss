@@ -1,0 +1,109 @@
+// Reset some basic elements
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+// Basic styling
+body {
+  background-color: $background-color;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-feature-settings: "kern" 1;
+     -moz-font-feature-settings: "kern" 1;
+       -o-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
+  font-kerning: normal;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+
+// Set `margin-bottom` to maintain vertical rhythm
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure {
+  margin-bottom: spacing(2);
+}
+
+
+// Images
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+
+// Figures
+figure > img {
+  display: block;
+}
+
+figcaption {
+  font-size: $font-size-6;
+}
+
+
+// Code formatting
+pre,
+code {
+  font-size: $font-size-6;
+  border: 1px solid $oc-gray-5;
+  border-radius: 3px;
+  background-color: #eef;
+}
+
+code {
+  padding: 1px 5px;
+}
+
+pre {
+  padding: 8px 12px;
+  overflow-x: auto;
+
+  > code {
+    border: 0;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+// Tables
+table {
+  margin-bottom: spacing(4);
+  width: 100%;
+  text-align: left;
+  color: lighten($text-color, 18%);
+  border-collapse: collapse;
+  border: 1px solid $oc-gray-5;
+  tr {
+    &:nth-child(even) {
+      background-color: lighten($oc-gray-5, 6%);
+    }
+  }
+  th, td {
+    padding: spacing(1) spacing(1);
+  }
+  th {
+    background-color: lighten($oc-gray-5, 3%);
+    border: 1px solid darken($oc-gray-5, 4%);
+    border-bottom-color: darken($oc-gray-5, 12%);
+  }
+  td {
+    border: 1px solid $oc-gray-5;
+  }
+}
+
+
+// Horizontal rule
+hr {
+  margin: 3rem auto;
+  width: 50%;
+  border: none;
+  border-top: 1px solid $oc-gray-3;
+}
