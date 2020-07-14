@@ -37,52 +37,16 @@ a {
   }
 }
 
-@mixin style-link {
-  transition: all 0.2s ease-in-out;
-  border-bottom: 1px solid $brand-color;
-
-  &:hover {
-    background-color: $brand-color-light-5;
-    color: $brand-color-dark-1;
-    border-bottom-color: $brand-color-dark-1;
-  }
-}
-
-@mixin reset-link {
-  color: inherit;
-
-  &:hover {
-    color: inherit;
-  }
-}
-
 
 // Lists
 ul, ol {
-  margin-left: 1.5rem;
+  margin-left: spacing(4);
 }
 
 li {
   > ul,
   > ol {
     margin-bottom: 0;
-  }
-}
-
-@mixin style-list { // Apply to `li` element
-  position: relative;
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -1.3rem;
-    margin: auto 0;
-    width: 6px;
-    height: 6px;
-    background-color: $brand-color;
-    border-radius: 50%;
   }
 }
 

@@ -1,9 +1,7 @@
 @charset "utf-8";
 
-@import
-  "variables",
-  "base/reset",
-  "base/open-color",
-  "base/base",
-  "base/typography"
-;
+@import "base/reset";
+@import "base/open-color";
+@import "variables/index";
+@import "base/base";
+@import "base/typography";

@@ -1,0 +1,13 @@
+@import "../sass/variables/index";
+
+.postContent {
+  ul { @include style-ul; }
+  ol { @include style-ol; }
+  a { @include style-link; }
+}
+
+.postMeta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

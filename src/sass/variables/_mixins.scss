@@ -1,0 +1,68 @@
+// Links
+
+@mixin style-link {
+  transition: all 0.2s ease-in-out;
+  border-bottom: 1px solid $brand-color;
+
+  &:hover {
+    background-color: $brand-color-light-5;
+    color: $brand-color-dark-1;
+    border-bottom-color: $brand-color-dark-1;
+  }
+}
+
+@mixin reset-link {
+  transition: none;
+  color: inherit;
+  border-bottom: none;
+
+  &:hover {
+    background: none;
+    color: inherit;
+  }
+}
+
+
+// Lists
+
+@mixin style-ul {
+  > li {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: spacing(-2);
+      transform: translateX(-50%);
+      margin: auto 0;
+      width: 6px;
+      height: 6px;
+      background-color: $brand-color;
+      border-radius: 50%;
+    }
+  }
+}
+
+@mixin style-ol {
+  counter-reset: ol-counter;
+
+  > li {
+    position: relative;
+    counter-increment: ol-counter;
+
+    &::before {
+      position: absolute;
+      content: counter(ol-counter) ". ";
+      top: 0;
+      bottom: 0;
+      left: spacing(-1);
+      transform: translateX(-100%);
+      margin: auto 0;
+      color: $brand-color;
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+    }
+  }
+}
