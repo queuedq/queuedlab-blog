@@ -74,7 +74,7 @@ export const listingQuery = graphql`
             title
             tags
             cover
-            date
+            summary
           }
         }
       }

@@ -1,0 +1,53 @@
+@import "../../sass/variables/index";
+
+.postList {
+  margin-left: 0;
+
+  > li {
+    padding: spacing(4) 0;
+    border-bottom: 1px solid $oc-gray-2;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+.postCard {
+  display: flex;
+  flex-direction: column;
+}
+
+.postTitle {
+  margin-top: 0;
+  margin-bottom: spacing(1);
+
+  a {
+    @include reset-link;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: scale-color($text-color, $alpha: -40%);
+    }
+  }
+}
+
+.postCategory {
+  order: -1;
+  margin-bottom: spacing(2);
+  font-weight: bold;
+  line-height: 1;
+  color: $brand-color;
+  text-transform: capitalize;
+}
+
+.postDate {
+  line-height: 1;
+  font-size: $font-size-6;
+  color: $oc-gray-6;
+}
+
+.postSummary {
+  margin-top: spacing(2);
+  color: $oc-gray-6;
+}
