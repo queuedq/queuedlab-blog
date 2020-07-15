@@ -28,18 +28,16 @@
 @mixin style-ul {
   > li {
     position: relative;
+    &, p { margin-bottom: spacing(1); }
 
     &::before {
-      content: "";
+      content: "•";
       position: absolute;
-      top: 0;
-      bottom: 0;
       left: spacing(-2);
       transform: translateX(-50%);
       margin: auto 0;
-      width: 6px;
-      height: 6px;
-      background-color: $brand-color;
+      font-weight: bold;
+      color: $brand-color;
       border-radius: 50%;
     }
   }
@@ -51,6 +49,7 @@
   > li {
     position: relative;
     counter-increment: ol-counter;
+    &, p { margin-bottom: spacing(1); }
 
     &::before {
       position: absolute;
