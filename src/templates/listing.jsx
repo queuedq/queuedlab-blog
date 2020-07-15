@@ -72,6 +72,7 @@ export const listingQuery = graphql`
           timeToRead
           frontmatter {
             title
+            category
             tags
             cover
             summary

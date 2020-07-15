@@ -9,6 +9,7 @@ class PostListing extends React.Component {
     this.props.postEdges.forEach(postEdge => {
       postList.push({
         path: postEdge.node.fields.slug,
+        category: postEdge.node.frontmatter.category,
         tags: postEdge.node.frontmatter.tags,
         cover: postEdge.node.frontmatter.cover,
         title: postEdge.node.frontmatter.title,
@@ -31,13 +32,10 @@ class PostListing extends React.Component {
             <h3 className={style.postTitle}>
               <Link to={post.path}>{post.title}</Link>
             </h3>
-            {post.tags
+            {post.category
             ? (
-              <Link
-                className={style.postCategory}
-                to={`/tags/${_.kebabCase(post.tags[0])}`}
-              >
-                {post.tags[0]}
+              <Link className={style.postCategory} to={`/tags/${_.kebabCase(post.category)}`}>
+                {post.category}
               </Link>
             ) : null}
             <time className={style.postDate}>{post.date}</time>
