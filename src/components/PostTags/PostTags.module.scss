@@ -1,6 +1,10 @@
 @import "../../sass/variables/index";
 
+.tagContainer {
+  margin-top: spacing(4);
+}
+
 .tag {
-  margin-right: spacing(1);
   @include style-link;
+  margin-right: spacing(1);
 }
