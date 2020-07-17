@@ -1,0 +1,6 @@
+@import "../../sass/variables/index";
+
+.tag {
+  margin-right: spacing(1);
+  @include style-link;
+}

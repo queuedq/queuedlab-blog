@@ -42,9 +42,7 @@ export default class PostTemplate extends React.Component {
             className={style.content}
             dangerouslySetInnerHTML={{ __html: postNode.html }}
           />
-          <div className={style.tags}>
-            <PostTags tags={post.tags} />
-          </div>
+          <PostTags tags={post.tags} />
         </div>
       </Layout>
     );

@@ -35,9 +35,3 @@
   ol { @include style-ol; }
   a { @include style-link; }
 }
-
-.tags {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
