@@ -15,10 +15,12 @@ class Footer extends Component {
     return (
       <footer className={style.footer}>
         <UserLinks />
-        <a href={withPrefix(config.siteRss)} className={style.footerLink}>
-          <FontAwesomeIcon icon={faRss} className={style.icon} />
-          RSS
-        </a>
+        <div>
+          <a href={withPrefix(config.siteRss)} className={style.footerLink}>
+            <FontAwesomeIcon icon={faRss} className={style.icon} />
+            RSS
+          </a>
+        </div>
       </footer>
     );
   }
