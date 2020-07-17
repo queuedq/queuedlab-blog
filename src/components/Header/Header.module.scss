@@ -1,0 +1,11 @@
+@import "../../sass/variables/index";
+
+.header {
+  @include style-container;
+  padding: spacing(2) 0;
+}
+
+.blogTitle {
+  font-size: $font-size-4;
+  font-weight: 300;
+}

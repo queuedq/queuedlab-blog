@@ -1,3 +1,5 @@
+@import "../sass/variables/index";
+
 * {
   box-sizing: border-box;
 }
@@ -18,9 +20,7 @@ body {
   min-width: 100vw;
 }
 
-.layout-container {
+.container {
   min-height: 100vh;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  @include style-container;
 }

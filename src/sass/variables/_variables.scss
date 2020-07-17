@@ -32,10 +32,19 @@ $base-font-size: $font-size-5;
 $base-line-height: 1.75;
 
 
-// Spacing
+// Layout
 
 $base-spacing: 8px;
 
 @function spacing($multiplier) {
   @return $base-spacing * $multiplier;
+}
+
+$content-width: 700px;
+
+@mixin style-container {
+  width: 90%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
