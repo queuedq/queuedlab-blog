@@ -1,0 +1,15 @@
+@import "../../sass/variables/index";
+
+.userLink {
+  margin-right: spacing(2);
+  color: $oc-gray-6;
+
+  &:hover {
+    color: $brand-color;
+    border-bottom: 1px solid $brand-color;
+  }
+
+  .icon {
+    margin-right: spacing(1);
+  }
+}

@@ -2,7 +2,8 @@
 
 .header {
   @include style-container;
-  padding: spacing(2) 0;
+  padding-top: spacing(2);
+  padding-bottom: spacing(2);
 }
 
 .blogTitle {

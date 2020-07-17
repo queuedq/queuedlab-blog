@@ -1,0 +1,22 @@
+@import "../../sass/variables/index";
+
+.footer {
+  @include style-container;
+  padding-bottom: spacing(4);
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerLink {
+  margin-right: spacing(2);
+  color: $oc-gray-6;
+
+  &:hover {
+    color: $brand-color;
+    border-bottom: 1px solid $brand-color;
+  }
+
+  .icon {
+    margin-right: spacing(1);
+  }
+}
