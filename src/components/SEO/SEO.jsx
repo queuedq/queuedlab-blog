@@ -18,7 +18,7 @@ class SEO extends Component {
       description = postMeta.description
         ? postMeta.description
         : postNode.excerpt;
-      image = postMeta.cover;
+      image = postMeta.cover ? postMeta.cover : config.siteLogo;
       postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
     } else {
       title = config.siteTitle;
@@ -27,21 +27,17 @@ class SEO extends Component {
     }
 
     const getImagePath = (imageURI) => {
-      if (
-        !imageURI.match(
-          `(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]`
-        )
-      )
+      if (!imageURI.match(
+        `(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]`
+      )) {
         return urljoin(config.siteUrl, config.pathPrefix, imageURI);
-
+      }
       return imageURI;
     };
 
     const getPublicationDate = () => {
       if (!postNode) return null;
-
       if (!postNode.frontmatter) return null;
-
       if (!postNode.frontmatter.date) return null;
 
       return moment(postNode.frontmatter.date, config.dateFromFormat).toDate();
