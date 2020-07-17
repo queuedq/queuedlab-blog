@@ -2,8 +2,9 @@
 
 .footer {
   @include style-container;
-  padding-bottom: spacing(4);
+  flex-shrink: 0;
   display: flex;
+  padding-bottom: spacing(4);
   justify-content: space-between;
 }
 

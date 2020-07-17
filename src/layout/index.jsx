@@ -10,7 +10,7 @@ export default class MainLayout extends React.Component {
   render() {
     const { children } = this.props;
     return (
-      <>
+      <div className={style.wrapper}>
         <Header />
         <div className={style.container}>
           <Helmet>
@@ -20,7 +20,7 @@ export default class MainLayout extends React.Component {
           {children}
         </div>
         <Footer />
-      </>
+      </div>
     );
   }
 }
