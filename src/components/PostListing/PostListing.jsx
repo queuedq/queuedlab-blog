@@ -1,9 +1,9 @@
 import React from "react";
 import _ from "lodash";
-import moment from "moment";
 import { Link, graphql } from "gatsby";
-import style from "./PostListing.module.scss";
 import config from "../../../data/SiteConfig";
+import moment from "../../utils/moment";
+import style from "./PostListing.module.scss";
 
 class PostListing extends React.Component {
   getPostList() {

@@ -2,8 +2,10 @@
 
 const path = require("path");
 const _ = require("lodash");
-const moment = require("moment");
+const moment = require('moment-timezone');
 const siteConfig = require("./data/SiteConfig");
+
+moment.tz.setDefault(siteConfig.siteTimezone);
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
