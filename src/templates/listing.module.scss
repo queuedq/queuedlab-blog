@@ -1,0 +1,25 @@
+@import "../sass/variables/index";
+
+.pagination {
+  text-align: center;
+}
+
+.page {
+  margin: 0 spacing(0.5);
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-variant-numeric: tabular-nums;
+  color: $oc-gray-7;
+  transition: 0.2s ease-out all;
+
+  &:hover {
+    background-color: $oc-gray-1;
+    color: $oc-gray-7;
+  }
+
+  &.current {
+    background-color: $oc-gray-2;
+    color: $oc-gray-8;
+  }
+}
+

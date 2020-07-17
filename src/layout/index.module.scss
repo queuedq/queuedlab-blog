@@ -22,5 +22,6 @@ body {
 
 .container {
   min-height: 100vh;
+  padding-bottom: spacing(8);
   @include style-container;
 }
