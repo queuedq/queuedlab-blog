@@ -25,7 +25,7 @@ const config = {
   postsPerPage: 4, // Amount of posts displayed per listing page.
   dateFormat: "YYYY. MM. DD.", // Date format for display.
   siteTimezone: "Asia/Seoul", // Timezone to display date
-  copyright: "Copyright © 2020. Advanced User", // Copyright string for the footer of the website and RSS feed.
+  copyright: "Copyright © 2020. queued", // Copyright string for the footer of the website and RSS feed.
 
   // Advanced Settings
 
