@@ -34,7 +34,8 @@
 
 .postCategory {
   order: -1;
-  margin-bottom: spacing(2);
+  margin-bottom: spacing(1);
+  font-size: $font-size-6;
   font-weight: bold;
   line-height: 1;
   color: $brand-color;
