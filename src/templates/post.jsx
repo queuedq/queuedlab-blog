@@ -1,10 +1,12 @@
 import React from "react";
+import _ from "lodash";
 import { Helmet } from "react-helmet";
-import { graphql } from "gatsby";
+import { Link, graphql } from "gatsby";
+import config from "../../data/SiteConfig";
+import moment from "../utils/moment";
 import Layout from "../layout";
 import PostTags from "../components/PostTags/PostTags";
 import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
 import "./b16-tomorrow-dark.css";
 import style from "./post.module.scss";
 
@@ -20,20 +22,28 @@ export default class PostTemplate extends React.Component {
 
     return (
       <Layout>
-        <div>
-          <Helmet>
-            <title>{`${post.title} | ${config.siteTitle}`}</title>
-          </Helmet>
-          <SEO postPath={slug} postNode={postNode} postSEO />
-          <div>
-            <h1>{post.title}</h1>
-            <div
-              className={style.postContent}
-              dangerouslySetInnerHTML={{ __html: postNode.html }}
-            />
-            <div className={style.postMeta}>
-              <PostTags tags={post.tags} />
-            </div>
+        <Helmet>
+          <title>{`${post.title} | ${config.siteTitle}`}</title>
+        </Helmet>
+        <SEO postPath={slug} postNode={postNode} postSEO />
+        <div className={style.postContainer}>
+          <div className={style.titleContainer}>
+            <h1 className={style.title}>{post.title}</h1>
+            {post.category && (
+              <Link className={style.category} to={`/categories/${_.kebabCase(post.category)}`}>
+                {post.category}
+              </Link>
+            )}
+            <time className={style.date}>
+              {moment(postNode.fields.date).format(config.dateFormat)}
+            </time>
+          </div>
+          <div
+            className={style.content}
+            dangerouslySetInnerHTML={{ __html: postNode.html }}
+          />
+          <div className={style.tags}>
+            <PostTags tags={post.tags} />
           </div>
         </div>
       </Layout>

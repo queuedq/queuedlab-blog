@@ -1,12 +1,43 @@
 @import "../sass/variables/index";
 
-.postContent {
+.postContainer {
+  margin-top: spacing(4);
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+
+  .title {
+    margin: 0 0 spacing(1) 0;
+  }
+
+  .category {
+    order: -1;
+    margin: 0 0 spacing(1) 0;
+    font-size: $font-size-5;
+    font-weight: bold;
+    line-height: 1;
+    color: $brand-color;
+    text-transform: capitalize;
+  }
+
+  .date {
+    display: block;
+    font-size: $font-size-6;
+    color: $oc-gray-7;
+  }
+
+}
+
+.content {
+  margin-top: spacing(4);
   ul { @include style-ul; }
   ol { @include style-ol; }
   a { @include style-link; }
 }
 
-.postMeta {
+.tags {
   display: flex;
   flex-direction: column;
   justify-content: center;
