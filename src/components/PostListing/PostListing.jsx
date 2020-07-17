@@ -34,7 +34,7 @@ class PostListing extends React.Component {
             </h3>
             {post.category
             ? (
-              <Link className={style.postCategory} to={`/tags/${_.kebabCase(post.category)}`}>
+              <Link className={style.postCategory} to={`/categories/${_.kebabCase(post.category)}`}>
                 {post.category}
               </Link>
             ) : null}
