@@ -1,10 +1,13 @@
 import React from "react";
 import _ from "lodash";
-import { Link } from "gatsby";
+import moment from "moment";
+import { Link, graphql } from "gatsby";
 import style from "./PostListing.module.scss";
+import config from "../../../data/SiteConfig";
 
 class PostListing extends React.Component {
   getPostList() {
+    console.log(this.props.postEdges);
     const postList = [];
     this.props.postEdges.forEach(postEdge => {
       postList.push({
@@ -14,7 +17,7 @@ class PostListing extends React.Component {
         cover: postEdge.node.frontmatter.cover,
         title: postEdge.node.frontmatter.title,
         summary: postEdge.node.frontmatter.summary,
-        date: postEdge.node.fields.date,
+        date: moment(postEdge.node.fields.date).format(config.dateFormat),
         excerpt: postEdge.node.excerpt,
         timeToRead: postEdge.node.timeToRead
       });
@@ -51,3 +54,21 @@ class PostListing extends React.Component {
 }
 
 export default PostListing;
+
+export const query = graphql`
+  fragment PostMetadata on MarkdownRemark {
+    excerpt
+    timeToRead
+    frontmatter {
+      title
+      category
+      tags
+      cover
+      summary
+    }
+    fields {
+      slug
+      date
+    }
+  }
+`

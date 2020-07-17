@@ -64,19 +64,7 @@ export const listingQuery = graphql`
     ) {
       edges {
         node {
-          fields {
-            slug
-            date
-          }
-          excerpt
-          timeToRead
-          frontmatter {
-            title
-            category
-            tags
-            cover
-            summary
-          }
+          ...PostMetadata
         }
       }
     }

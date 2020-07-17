@@ -31,19 +31,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(sort: { fields: [fields___date], order: DESC }) {
       edges {
         node {
-          fields {
-            slug
-            date
-          }
-          excerpt
-          timeToRead
-          frontmatter {
-            title
-            category
-            tags
-            cover
-            summary
-          }
+          ...PostMetadata
         }
       }
     }
