@@ -7,7 +7,6 @@ import style from "./PostListing.module.scss";
 
 class PostListing extends React.Component {
   getPostList() {
-    console.log(this.props.postEdges);
     const postList = [];
     this.props.postEdges.forEach(postEdge => {
       postList.push({
