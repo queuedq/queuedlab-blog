@@ -34,6 +34,7 @@ export default class PostTemplate extends React.Component {
                 {post.category}
               </Link>
             )}
+            {post.summary && <div className={style.summary}>{post.summary}</div>}
             <time className={style.date}>
               {moment(postNode.fields.date).format(config.dateFormat)}
             </time>

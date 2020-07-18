@@ -8,13 +8,19 @@
   display: flex;
   flex-direction: column;
 
-  .title {
+  *:not(:last-child) {
     margin: 0 0 spacing(1) 0;
+  }
+
+  .summary {
+    font-size: $font-size-4;
+    font-weight: 300;
+    line-height: 1.5;
+    color: $oc-gray-7;
   }
 
   .category {
     order: -1;
-    margin: 0 0 spacing(1) 0;
     font-size: $font-size-5;
     font-weight: bold;
     line-height: 1;
@@ -24,7 +30,7 @@
   .date {
     display: block;
     font-size: $font-size-6;
-    color: $oc-gray-7;
+    color: $oc-gray-6;
   }
 
 }
