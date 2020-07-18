@@ -2,12 +2,13 @@
 
 @mixin style-link {
   transition: all 0.2s ease-in-out;
-  border-bottom: 1px solid $brand-color;
+  color: $primary-color-500;
+  border-bottom: 1px solid $primary-color-300;
 
   &:hover {
-    background-color: $brand-color-light-5;
-    color: $brand-color-dark-1;
-    border-bottom-color: $brand-color-dark-1;
+    background-color: $primary-color-50;
+    color: $primary-color-600;
+    border-bottom-color: $primary-color-400;
   }
 }
 
@@ -37,7 +38,7 @@
       transform: translateX(-50%);
       margin: auto 0;
       font-weight: bold;
-      color: $brand-color;
+      color: $primary-color;
       border-radius: 50%;
     }
   }
@@ -59,7 +60,7 @@
       left: spacing(-1);
       transform: translateX(-100%);
       margin: auto 0;
-      color: $brand-color;
+      color: $primary-color;
       font-weight: 600;
       font-variant-numeric: tabular-nums;
     }

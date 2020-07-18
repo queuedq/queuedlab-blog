@@ -29,11 +29,11 @@ h6 { font-size: $font-size-6; }
 
 // Links
 a {
-  color: $brand-color;
+  color: $primary-color-500;
   text-decoration: none;
 
   &:hover {
-    color: $brand-color-dark-2;
+    color: $primary-color-700;
   }
 }
 

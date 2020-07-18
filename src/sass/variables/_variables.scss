@@ -1,18 +1,17 @@
 // Color
 
-$brand-color: #8a2ae2;
+$primary-color-50: #f3eafc;
+$primary-color-100: #e8d4f9;
+$primary-color-200: #d0aaf3;
+$primary-color-300: #b97fee;
+$primary-color-400: #a155e8;
+$primary-color-500: #8a2ae2;
+$primary-color-600: #7c26cb;
+$primary-color-700: #6e22b5;
+$primary-color-800: #611d9e;
+$primary-color-900: #531988;
 
-$brand-color-light-1: #a155e8;
-$brand-color-light-2: #b97fee;
-$brand-color-light-3: #d0aaf3;
-$brand-color-light-4: #e8d4f9;
-$brand-color-light-5: #f3eafc;
-
-$brand-color-dark-1: #7c26cb;
-$brand-color-dark-2: #6e22b5;
-$brand-color-dark-3: #531988;
-$brand-color-dark-4: #37115a;
-$brand-color-dark-5: #1c082d;
+$primary-color: $primary-color-500;
 
 $text-color: #111;
 $background-color: #fdfdfd !default;
