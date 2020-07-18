@@ -10,12 +10,7 @@
 
 .footerLink {
   margin-right: spacing(2);
-  color: $oc-gray-6;
-
-  &:hover {
-    color: $primary-color-500;
-    border-bottom: 1px solid $primary-color-500;
-  }
+  @include style-link-alt;
 
   .icon {
     margin-right: spacing(1);

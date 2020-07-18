@@ -1,7 +1,7 @@
 // Links
 
 @mixin style-link {
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
   color: $primary-color-500;
   border-bottom: 1px solid $primary-color-300;
 
@@ -9,6 +9,17 @@
     background-color: $primary-color-50;
     color: $primary-color-600;
     border-bottom-color: $primary-color-400;
+  }
+}
+
+@mixin style-link-alt {
+  transition: all 0.1s ease-in-out;
+  color: $oc-gray-6;
+  border-bottom: 1px solid change-color($primary-color-500, $alpha: 0);
+
+  &:hover {
+    color: $primary-color-500;
+    border-bottom: 1px solid $primary-color-300;
   }
 }
 
