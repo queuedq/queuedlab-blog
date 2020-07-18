@@ -6,7 +6,7 @@ const config = {
   // siteTitleAlt: "queuedlab", // Alternative site title for SEO.
   siteDescription: "queued의 블로그", // Website description used for RSS feeds/meta description tag.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
-  siteUrl: "https://gatsby-advanced-starter-demo.netlify.com", // Domain of your website without pathPrefix.
+  siteUrl: "https://queuedq.github.io", // Domain of your website without pathPrefix.
 
   // Author Info
 
