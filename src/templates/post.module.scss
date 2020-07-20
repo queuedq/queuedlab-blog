@@ -15,7 +15,7 @@
   .summary {
     font-size: $font-size-4;
     line-height: 1.5;
-    color: $oc-gray-7;
+    color: $oc-gray-6;
   }
 
   .category {
@@ -35,7 +35,7 @@
 }
 
 .content {
-  margin-top: spacing(4);
+  margin-top: spacing(6);
   ul { @include style-ul; }
   ol { @include style-ol; }
   a { @include style-link; }
