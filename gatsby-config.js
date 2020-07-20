@@ -46,7 +46,16 @@ module.exports = {
           {
             resolve: "gatsby-remark-images",
             options: {
-              maxWidth: 690
+              maxWidth: 800
+            }
+          },
+          {
+            resolve: "gatsby-remark-embed-video",
+            options: {
+              width: 800,
+              related: false,
+              noIframeBorder: true,
+              containerClass: 'embedVideo-container',
             }
           },
           {

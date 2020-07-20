@@ -7,6 +7,25 @@ const siteConfig = require("./data/SiteConfig");
 
 moment.tz.setDefault(siteConfig.siteTimezone);
 
+// Post frontmatter schema
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter
+    }
+    type Frontmatter {
+      title: String!
+      date: String!
+      category: String
+      tags: [String!]
+      cover: String
+      summary: String
+    }
+  `
+  createTypes(typeDefs)
+}
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
   let slug;
