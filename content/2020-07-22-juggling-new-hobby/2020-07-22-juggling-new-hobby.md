@@ -71,5 +71,7 @@ Mills mess가 어떤 패턴인지 궁금해서 검색해 보았고, 첫 검색 �
 - [Juggling pattern - Wikipedia](https://en.wikipedia.org/wiki/Juggling_pattern): 기본적인 저글링 패턴들이 움직이는 그림으로 소개되어 있다.
 - [Library of Juggling](https://www.libraryofjuggling.com/): 잘 알려진 저글링 패턴들을 모아 둔 웹사이트
 
-한국에서는 크게 활성화된 저글링 커뮤니티를 찾아보기 힘들었는데, 혹시 잘 아는 독자가 있다면 제보 바란다.
+---
+
+한국에서는 크게 활성화된 저글링 커뮤니티를 찾아보기 힘들었는데, 혹시 잘 아는 독자가 있다면 제보 바랍니다.
 
