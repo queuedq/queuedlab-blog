@@ -7,14 +7,14 @@ html, body {
 }
 
 // Headings
-h1, h2, h3 {
+h1, h2 {
   margin: spacing(6) 0 spacing(2) 0;
   font-weight: 700;
   line-height: 1.25;
   color: $oc-gray-9;
 }
 
-h4, h5, h6 {
+h3, h4, h5, h6 {
   margin: spacing(4) 0 spacing(1) 0;
   font-weight: 700;
   line-height: 1.5;

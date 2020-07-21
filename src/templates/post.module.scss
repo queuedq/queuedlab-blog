@@ -31,7 +31,6 @@
     font-size: $font-size-6;
     color: $oc-gray-6;
   }
-
 }
 
 .content {
@@ -39,4 +38,8 @@
   ul { @include style-ul; }
   ol { @include style-ol; }
   a { @include style-link; }
+  :global(.gatsby-resp-image-wrapper),
+  :global(.gatsby-resp-iframe-wrapper) {
+    margin: spacing(4) 0;
+  }
 }
