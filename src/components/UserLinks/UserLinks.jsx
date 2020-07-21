@@ -15,7 +15,7 @@ const UserLink = ({serviceName, link}) => {
   const service = services[serviceName];
   return (
     <a href={link} className={style.userLink}>
-      <FontAwesomeIcon icon={service.icon} className={style.icon} />
+      <FontAwesomeIcon icon={service.icon} className={style.icon} width={16} />
       {service.label}
     </a>
   );

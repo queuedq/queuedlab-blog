@@ -17,7 +17,7 @@ class Footer extends Component {
         <UserLinks />
         <div>
           <a href={withPrefix(config.siteRss)} className={style.footerLink}>
-            <FontAwesomeIcon icon={faRss} className={style.icon} />
+            <FontAwesomeIcon icon={faRss} className={style.icon} width={16} />
             RSS
           </a>
         </div>
