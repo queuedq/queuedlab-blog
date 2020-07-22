@@ -14,7 +14,7 @@ module.exports = {
       image_url: `${urljoin(
         config.siteUrl,
         config.pathPrefix
-      )}/logos/logo-512.png`,
+      )}/icons/icon-512x512.png`,
       copyright: config.copyright
     }
   },
@@ -94,18 +94,7 @@ module.exports = {
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
         display: "minimal-ui",
-        icons: [
-          {
-            src: "/logos/logo-192.png",
-            sizes: "192x192",
-            type: "image/png"
-          },
-          {
-            src: "/logos/logo-512.png",
-            sizes: "512x512",
-            type: "image/png"
-          }
-        ]
+        icon: "static/logos/logo.png",
       }
     },
     "gatsby-plugin-offline",
