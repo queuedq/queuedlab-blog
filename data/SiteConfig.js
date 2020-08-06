@@ -6,7 +6,7 @@ const config = {
   // siteTitleAlt: "queuedlab", // Alternative site title for SEO.
   siteDescription: "queued의 블로그", // Website description used for RSS feeds/meta description tag.
   siteLogo: "/icons/icon-512x512.png", // Logo used for SEO and manifest.
-  siteUrl: "https://queuedq.github.io", // Domain of your website without pathPrefix.
+  siteUrl: "https://blog.queuedlab.com", // Domain of your website without pathPrefix.
 
   // Author Info
 
