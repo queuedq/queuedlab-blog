@@ -100,8 +100,8 @@ table {
 
 // Horizontal rule
 hr {
-  margin: 3rem auto;
-  width: 50%;
+  margin: spacing(4) auto;
+  width: 80%;
   border: none;
   border-top: 1px solid $oc-gray-3;
 }
