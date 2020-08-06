@@ -15,8 +15,8 @@ class SEO extends Component {
     if (postSEO) {
       const postMeta = postNode.frontmatter;
       ({ title } = postMeta);
-      description = postMeta.description
-        ? postMeta.description
+      description = postMeta.summary
+        ? postMeta.summary
         : postNode.excerpt;
       image = postMeta.cover ? postMeta.cover : config.siteLogo;
       postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
