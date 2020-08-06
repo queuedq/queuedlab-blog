@@ -49,27 +49,25 @@ figcaption {
 
 
 // Code formatting
-pre,
+// Block code is mostly handled by PrismJS
+pre, code {
+  border-radius: 4px;
+}
+
 code {
+  padding: 1px 4px;
+  margin: 0 2px;
   font-size: $font-size-6;
-  border: 1px solid $oc-gray-5;
-  border-radius: 3px;
-  background-color: #eef;
+  border: 1px solid scale-color($primary-color-200, $saturation: -80%);
+  border-radius: 4px;
+  background-color: $primary-color-25;
 }
 
-code {
-  padding: 1px 5px;
-}
-
-pre {
-  padding: 8px 12px;
-  overflow-x: auto;
-
-  > code {
-    border: 0;
-    padding-right: 0;
-    padding-left: 0;
-  }
+pre code { // Reset for block code
+  padding: 0;
+  margin: 0;
+  border: none;
+  background-color: none;
 }
 
 

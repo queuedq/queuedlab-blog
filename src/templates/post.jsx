@@ -7,7 +7,7 @@ import moment from "../utils/moment";
 import Layout from "../layout";
 import PostTags from "../components/PostTags/PostTags";
 import SEO from "../components/SEO/SEO";
-import "./b16-tomorrow-dark.css";
+import "./b16-tomorrow-dark.scss";
 import style from "./post.module.scss";
 
 export default class PostTemplate extends React.Component {
