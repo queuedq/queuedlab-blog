@@ -14,7 +14,7 @@ tags:
 
 ---
 
-작년 4월에 처음으로 나(한동규), 이재혁, 박원 세 명으로 구성된 PS 팀을 꾸렸다. [UCPC](http://ucpc.me/)에 나가기 위해 UNIST 컴퓨터 동아리 HeXA의 슬랙에서 팀원을 구했고, 그 해 처음으로 UCPC 본선에 진출했다. 이번 UCPC 2020은 이 팀으로 참가하는 두 번째 UCPC다.
+작년 4월에 처음으로 [나(한동규)](https://www.acmicpc.net/user/queued_q), [이재혁](https://www.acmicpc.net/user/checkchck), [박원](https://www.acmicpc.net/user/chunghan) 세 명으로 구성된 PS 팀을 꾸렸다. [UCPC](http://ucpc.me/)에 나가기 위해 UNIST 컴퓨터 동아리 HeXA의 슬랙에서 팀원을 구했고, 그 해 처음으로 UCPC 본선에 진출했다. 이번 UCPC 2020은 이 팀으로 참가하는 두 번째 UCPC다.
 
 아직 공식적으로 정한 팀명은 없다. 작년에는 ACM-ICPC 월드 파이널에 진출한 팀 789의 짝퉁 버전인 171819 팀으로 출전했다. 팀원들의 학번이 각각 17, 18, 19였기 때문이다. 올해는 Team 112🚨 라는 이름으로 출전했다. 팀원들의 이름이 1동규, 박1, 2재혁이기 때문이다.
 
