@@ -186,6 +186,7 @@ module.exports = {
           }
         ]
       }
-    }
+    },
+    "gatsby-plugin-cname",
   ]
 };
