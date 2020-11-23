@@ -24,7 +24,7 @@ COVID-19의 영향으로 올해는 예선과 본선 모두 온라인으로 진�
 
 ![예선 스코어보드](quals-scoreboard.png)
 
-[문제 보러가기](https://www.acmicpc.net/category/detail/2270)
+[문제 보러가기](https://www.acmicpc.net/category/detail/2270) / [스코어보드](https://www.acmicpc.net/contest/scoreboard/521)
 
 **해결한 문제:** A, C, D, G, H, I, J (7문제 해결, 25위)
 
@@ -42,7 +42,7 @@ C를 풀고 새벽 1시 반쯤 E를 고민하다가 재혁이가 [I (인버스 �
 
 ![본선 스코어보드](finals-scoreboard.png)
 
-[문제 보러가기](https://www.acmicpc.net/category/detail/2272) / [스코어보드](https://ucpc.acmicpc.net/contest/scoreboard/524)
+[문제 보러가기](https://www.acmicpc.net/category/detail/2272) / [스코어보드](https://www.acmicpc.net/contest/scoreboard/524)
 
 **해결한 문제:** A, C, L (3문제 해결, 89위)
 

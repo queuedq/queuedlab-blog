@@ -16,7 +16,7 @@ tags:
 
 ##예선
 
-[문제 보러가기](https://www.acmicpc.net/category/detail/2270) / [출제진 풀이](http://ucpc.me/assets/ucpc20-prelim-solutions.pdf)
+[문제 보러가기](https://www.acmicpc.net/category/detail/2270) / [스코어보드](https://www.acmicpc.net/contest/scoreboard/521) / [출제진 풀이](http://ucpc.me/assets/ucpc20-prelim-solutions.pdf)
 
 **해결한 문제:** A, C, D, G, H, I, J (7문제 해결, 25위)
 
@@ -93,7 +93,7 @@ BFS를 돌리는데, 이웃한 노드를 곧장 큐에 넣는 대신 그 노드�
 
 ## 본선
 
-[문제 보러가기](https://www.acmicpc.net/category/detail/2272) / [스코어보드](https://ucpc.acmicpc.net/contest/scoreboard/524) / 출제진 풀이 (업데이트 예정)
+[문제 보러가기](https://www.acmicpc.net/category/detail/2272) / [스코어보드](https://www.acmicpc.net/contest/scoreboard/524) / [출제진 풀이](http://ucpc.me/assets/ucpc20-finals-solutions.pdf)
 
 **해결한 문제:** A, C, L (3문제 해결, 89위)
 
