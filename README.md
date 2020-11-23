@@ -2,6 +2,18 @@
 
 Based on [gatsby-advanced-starter](https://github.com/Vagr9K/gatsby-advanced-starter) by Vagr9K.
 
+## Development
+
+```
+npm run dev
+```
+
+## Publish
+
+```
+npm run deploy
+```
+
 ## License Notice
 
 - [gatsby-advanced-starter](https://github.com/Vagr9K/gatsby-advanced-starter/blob/master/LICENSE)
