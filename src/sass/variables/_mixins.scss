@@ -77,3 +77,17 @@
     }
   }
 }
+
+@mixin style-task {
+  & > input, & > p > input {
+    position: absolute;
+    margin: 0;
+    left: spacing(-2);
+    top: spacing(1); // TODO: make it more exact/flexible?
+    transform: translateX(-50%);
+  }
+
+  &::before {
+    content: "";
+  }
+}

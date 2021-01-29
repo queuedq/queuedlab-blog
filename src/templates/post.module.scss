@@ -38,6 +38,7 @@
   ul { @include style-ul; }
   ol { @include style-ol; }
   a { @include style-link; }
+  ul > li:global(.task-list-item) { @include style-task; }
   :global(.gatsby-resp-image-wrapper),
   :global(.gatsby-resp-iframe-wrapper) {
     margin: spacing(4) 0;
