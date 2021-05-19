@@ -2,6 +2,9 @@
 title: 2021년 상반기에 참가한 알고리즘 대회
 slug: competitions-2021-first-half
 date: 2021-05-19T03:06:04+09:00
+summary: >-
+  올해 처음으로 Google Code Jam Round 3에 진출했고,
+  프로그래머스 월간 코딩 챌린지와 카카오 인턴십 코딩 테스트에 참가했습니다.
 category: Problem Solving
 tags:
   - PS
