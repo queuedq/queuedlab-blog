@@ -37,7 +37,7 @@ export default class PostTemplate extends React.Component {
             )}
             {post.summary && <div className={style.summary}>{post.summary}</div>}
             <time className={style.date}>
-              {moment(postNode.fields.date).format(config.dateFormat)}
+              {moment(postNode.frontmatter.date).format(config.dateFormat)}
             </time>
           </div>
           <div
@@ -67,7 +67,6 @@ export const pageQuery = graphql`
       }
       fields {
         slug
-        date
       }
     }
   }

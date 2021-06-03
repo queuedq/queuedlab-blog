@@ -52,8 +52,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         const date = moment(node.frontmatter.date);
         if (!date.isValid())
           console.warn(`WARNING: Invalid date.`, node.frontmatter);
-
-        createNodeField({ node, name: "date", value: date.toISOString() });
       }
     }
     createNodeField({ node, name: "slug", value: slug });
