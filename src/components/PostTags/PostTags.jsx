@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import _ from "lodash";
 import { Link } from "gatsby";
-import style from "./PostTags.module.scss";
+import * as style from "./PostTags.module.scss";
 
 class PostTags extends Component {
   render() {

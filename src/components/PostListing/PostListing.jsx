@@ -3,7 +3,7 @@ import _ from "lodash";
 import { Link, graphql } from "gatsby";
 import config from "../../../data/SiteConfig";
 import moment from "../../utils/moment";
-import style from "./PostListing.module.scss";
+import * as style from "./PostListing.module.scss";
 
 class PostListing extends React.Component {
   getPostList() {

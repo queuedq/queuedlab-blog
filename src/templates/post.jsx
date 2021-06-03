@@ -8,7 +8,7 @@ import Layout from "../layout";
 import PostTags from "../components/PostTags/PostTags";
 import SEO from "../components/SEO/SEO";
 import "./b16-tomorrow-dark.scss";
-import style from "./post.module.scss";
+import * as style from "./post.module.scss";
 import "katex/dist/katex.min.css";
 
 export default class PostTemplate extends React.Component {

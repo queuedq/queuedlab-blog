@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRss } from "@fortawesome/free-solid-svg-icons";
 import config from "../../../data/SiteConfig";
 import UserLinks from "../UserLinks/UserLinks";
-import style from "./Footer.module.scss";
+import * as style from "./Footer.module.scss";
 
 class Footer extends Component {
   render() {
