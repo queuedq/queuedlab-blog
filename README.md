@@ -5,13 +5,13 @@ Based on [gatsby-advanced-starter](https://github.com/Vagr9K/gatsby-advanced-sta
 ## Development
 
 ```
-npm run dev
+yarn run dev
 ```
 
 ## Publish
 
 ```
-npm run deploy
+yarn run deploy
 ```
 
 ## License Notice
