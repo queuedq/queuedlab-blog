@@ -24,7 +24,7 @@ const UserLink = ({serviceName, link}) => {
 const UserLinks = () => {
   if (!config.userLinks) return null;
   return (
-    <div className={style.userLinks}>
+    <div>
       {Object.entries(config.userLinks).map(([key, link]) => {
         return <UserLink serviceName={key} link={link} />
       })}
