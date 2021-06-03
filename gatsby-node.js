@@ -50,7 +50,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         slug = `/${_.kebabCase(node.frontmatter.slug)}`;
       if (Object.prototype.hasOwnProperty.call(node.frontmatter, "date")) {
         const date = moment(node.frontmatter.date);
-        if (!date.isValid)
+        if (!date.isValid())
           console.warn(`WARNING: Invalid date.`, node.frontmatter);
 
         createNodeField({ node, name: "date", value: date.toISOString() });
