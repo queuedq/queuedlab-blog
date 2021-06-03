@@ -117,28 +117,36 @@ exports.createPages = async ({ graphql, actions }) => {
     return 0;
   });
 
-  // Pagination
+  // Paging
   const { postsPerPage } = siteConfig;
-  const pageCount = Math.ceil(postsEdges.length / postsPerPage);
+  if (postsPerPage) {
+    const pageCount = Math.ceil(postsEdges.length / postsPerPage);
 
-  [...Array(pageCount)].forEach((_val, pageNum) => {
-    createPage({
-      path: pageNum === 0 ? `/` : `/${pageNum + 1}/`,
-      component: listingPage,
-      context: {
-        limit: postsPerPage,
-        skip: pageNum * postsPerPage,
-        pageCount,
-        currentPageNum: pageNum + 1
-      }
+    [...Array(pageCount)].forEach((_val, pageNum) => {
+      createPage({
+        path: pageNum === 0 ? `/` : `/${pageNum + 1}/`,
+        component: listingPage,
+        context: {
+          limit: postsPerPage,
+          skip: pageNum * postsPerPage,
+          pageCount,
+          currentPageNum: pageNum + 1,
+        },
+      });
     });
-  });
+  } else {
+    // Load the landing page instead
+    createPage({
+      path: `/`,
+      component: landingPage,
+    });
+  }
 
   // Post page creating
   postsEdges.forEach((edge, index) => {
     // Generate a list of tags
     if (edge.node.frontmatter.tags) {
-      edge.node.frontmatter.tags.forEach(tag => {
+      edge.node.frontmatter.tags.forEach((tag) => {
         tagSet.add(tag);
       });
     }
@@ -162,26 +170,26 @@ exports.createPages = async ({ graphql, actions }) => {
         nexttitle: nextEdge.node.frontmatter.title,
         nextslug: nextEdge.node.fields.slug,
         prevtitle: prevEdge.node.frontmatter.title,
-        prevslug: prevEdge.node.fields.slug
-      }
+        prevslug: prevEdge.node.fields.slug,
+      },
     });
   });
 
   //  Create tag pages
-  tagSet.forEach(tag => {
+  tagSet.forEach((tag) => {
     createPage({
       path: `/tags/${_.kebabCase(tag)}/`,
       component: tagPage,
-      context: { tag }
+      context: { tag },
     });
   });
 
   // Create category pages
-  categorySet.forEach(category => {
+  categorySet.forEach((category) => {
     createPage({
       path: `/categories/${_.kebabCase(category)}/`,
       component: categoryPage,
-      context: { category }
+      context: { category },
     });
   });
 };
