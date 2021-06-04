@@ -11,13 +11,13 @@ const config = {
   // Author Info
 
   userName: "queued", // Username to display in the author segment.
-  userEmail: "queued37@gmail.com", // Email used for RSS feed's author segment
+  userEmail: "queuedq@gmail.com", // Email used for RSS feed's author segment
   userTwitter: "https://twitter.com/queued_q", // User Twitter
   // userLocation: "Korea", // User location to display in the author segment.
   userLinks: { // Links to social media profiles/contacts of the blog owner
     github: "https://github.com/queuedq",
     twitter: "https://twitter.com/queued_q",
-    email: "mailto:queued37@gmail.com",
+    email: "mailto:queuedq@gmail.com",
   },
 
   // Display Settings
