@@ -3,7 +3,6 @@ const config = {
 
   siteTitle: "queuedlab", // Site title.
   siteTitleShort: "queuedlab", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
-  // siteTitleAlt: "queuedlab", // Alternative site title for SEO.
   siteDescription: "queued의 블로그", // Website description used for RSS feeds/meta description tag.
   siteLogo: "/icons/icon-512x512.png", // Logo used for SEO and manifest.
   siteUrl: "https://blog.queuedlab.com", // Domain of your website without pathPrefix.

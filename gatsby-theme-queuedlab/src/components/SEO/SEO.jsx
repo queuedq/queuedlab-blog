@@ -66,7 +66,6 @@ class SEO extends Component {
         "@type": "WebSite",
         url: blogURL,
         name: title,
-        alternateName: config.siteTitleAlt ? config.siteTitleAlt : "",
       },
     ];
     if (postSEO) {
@@ -91,7 +90,6 @@ class SEO extends Component {
           "@type": "BlogPosting",
           url: blogURL,
           name: title,
-          alternateName: config.siteTitleAlt ? config.siteTitleAlt : "",
           headline: title,
           image: { "@type": "ImageObject", url: image },
           author: authorJSONLD,
