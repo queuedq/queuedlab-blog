@@ -53,4 +53,9 @@ if (config.siteUrl.substr(-1) === "/")
 if (config.siteRss && config.siteRss[0] !== "/")
   config.siteRss = `/${config.siteRss}`;
 
+// Add utility function
+const urljoin = require('url-join');
+
+config.getFullPath = (relativePath) => urljoin(config.siteUrl, config.pathPrefix, relativePath);
+
 module.exports = config;

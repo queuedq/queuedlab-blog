@@ -1,5 +1,3 @@
-const urljoin = require("url-join");
-const path = require("path");
 const config = require("./data/SiteConfig");
 
 // Make sure that pathPrefix is not empty
@@ -8,16 +6,13 @@ const validatedPathPrefix = config.pathPrefix === "" ? "/" : config.pathPrefix;
 module.exports = {
   pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
   siteMetadata: {
-    siteUrl: urljoin(config.siteUrl, config.pathPrefix),
+    siteUrl: config.getFullPath("/"),
     rssMetadata: {
-      site_url: urljoin(config.siteUrl, config.pathPrefix),
-      feed_url: urljoin(config.siteUrl, config.pathPrefix, config.siteRss),
+      site_url: config.getFullPath("/"),
+      feed_url: config.getFullPath(config.siteRss),
       title: config.siteTitle,
       description: config.siteDescription,
-      image_url: `${urljoin(
-        config.siteUrl,
-        config.pathPrefix
-      )}/icons/icon-512x512.png`,
+      image_url: config.getFullPath(config.siteLogo),
       copyright: config.copyright
     }
   },

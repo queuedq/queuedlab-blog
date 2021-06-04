@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
-import urljoin from "url-join";
 import moment from "../../utils/moment";
 import config from "../../../data/SiteConfig";
 
@@ -19,7 +18,7 @@ class SEO extends Component {
         ? postMeta.summary
         : postNode.excerpt;
       image = postMeta.cover ? postMeta.cover : config.siteLogo;
-      postURL = urljoin(config.siteUrl, config.pathPrefix, postPath);
+      postURL = config.getFullPath(postPath);
     } else {
       title = config.siteTitle;
       description = config.siteDescription;
@@ -30,7 +29,7 @@ class SEO extends Component {
       if (!imageURI.match(
         `(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]`
       )) {
-        return urljoin(config.siteUrl, config.pathPrefix, imageURI);
+        return config.getFullPath(imageURI);
       }
       return imageURI;
     };
@@ -59,7 +58,7 @@ class SEO extends Component {
       url: getImagePath(config.siteLogo),
     };
 
-    const blogURL = urljoin(config.siteUrl, config.pathPrefix);
+    const blogURL = config.getFullPath("/");
     const schemaOrgJSONLD = [
       {
         "@context": "http://schema.org",
