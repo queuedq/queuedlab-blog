@@ -1,5 +1,6 @@
 /* eslint "no-console": "off" */
 
+const fs = require("fs");
 const path = require("path");
 const _ = require("lodash");
 const moment = require('moment-timezone');
@@ -7,12 +8,22 @@ const siteConfig = require("./data/SiteConfig");
 
 moment.tz.setDefault(siteConfig.siteTimezone);
 
+// Make sure the content directory exists
+exports.onPreBootstrap = ({ reporter }) => {
+  const contentPath = "content"
+  if (!fs.existsSync(contentPath)) {
+    reporter.info(`creating the ${contentPath} directory`)
+    fs.mkdirSync(contentPath)
+  }
+}
+
 // Post frontmatter schema
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter
+      fields: Fields
     }
     type Frontmatter {
       title: String!
@@ -21,6 +32,9 @@ exports.createSchemaCustomization = ({ actions }) => {
       tags: [String!]
       cover: String
       summary: String
+    }
+    type Fields {
+      slug: String!
     }
   `
   createTypes(typeDefs)
@@ -60,11 +74,10 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  const postPage = path.resolve("src/templates/post.jsx");
-  const tagPage = path.resolve("src/templates/tag.jsx");
-  const categoryPage = path.resolve("src/templates/category.jsx");
-  const listingPage = path.resolve("./src/templates/listing.jsx");
-  const landingPage = path.resolve("./src/templates/landing.jsx");
+  const postPage = require.resolve("./src/templates/post.jsx");
+  const tagPage = require.resolve("./src/templates/tag.jsx");
+  const categoryPage = require.resolve("./src/templates/category.jsx");
+  const listingPage = require.resolve("./src/templates/listing.jsx");
 
   // Get a full list of markdown posts
   const markdownQueryResult = await graphql(`
