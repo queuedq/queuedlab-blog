@@ -14,7 +14,7 @@ tags:
 
 ---
 
-##예선
+## 예선
 
 [문제 보러가기](https://www.acmicpc.net/category/detail/2270) / [스코어보드](https://www.acmicpc.net/contest/scoreboard/521) / [출제진 풀이](http://ucpc.me/assets/ucpc20-prelim-solutions.pdf)
 
