@@ -56,6 +56,7 @@ if (config.siteRss && config.siteRss[0] !== "/")
 // Add utility function
 const urljoin = require('url-join');
 
-config.getFullPath = (relativePath) => urljoin(config.siteUrl, config.pathPrefix, relativePath);
+config.withPrefix = (path) => urljoin(config.pathPrefix, path);
+config.getFullPath = (path) => urljoin(config.siteUrl, config.pathPrefix, path);
 
 module.exports = config;
