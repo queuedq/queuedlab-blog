@@ -1,8 +1,5 @@
 const config = require("./data/site-config");
 
-// Make sure that pathPrefix is not empty
-const validatedPathPrefix = config.pathPrefix === "" ? "/" : config.pathPrefix;
-
 module.exports = {
   pathPrefix: config.pathPrefix === "" ? "/" : config.pathPrefix,
   siteMetadata: {
@@ -92,20 +89,6 @@ module.exports = {
     "gatsby-plugin-catch-links",
     "gatsby-plugin-twitter",
     "gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        name: config.siteTitle,
-        short_name: config.siteTitleShort,
-        description: config.siteDescription,
-        start_url: validatedPathPrefix,
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
-        display: "minimal-ui",
-        icon: "static/logos/logo.png",
-      }
-    },
-    "gatsby-plugin-offline",
     {
       resolve: "gatsby-plugin-feed",
       options: {
