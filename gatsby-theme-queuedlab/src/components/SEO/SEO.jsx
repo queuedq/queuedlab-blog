@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
-import moment from "../../utils/moment";
 import config from "../../../data/SiteConfig";
 
 class SEO extends Component {
@@ -14,9 +13,7 @@ class SEO extends Component {
     if (postSEO) {
       const postMeta = postNode.frontmatter;
       ({ title } = postMeta);
-      description = postMeta.summary
-        ? postMeta.summary
-        : postNode.excerpt;
+      description = postMeta.summary ? postMeta.summary : postNode.excerpt;
       image = postMeta.cover ? postMeta.cover : config.siteLogo;
       postURL = config.getFullPath(postPath);
     } else {
@@ -34,17 +31,7 @@ class SEO extends Component {
       return imageURI;
     };
 
-    const getPublicationDate = () => {
-      if (!postNode) return null;
-      if (!postNode.frontmatter) return null;
-      if (!postNode.frontmatter.date) return null;
-
-      return moment(postNode.frontmatter.date, config.dateFromFormat).toDate();
-    };
-
     image = getImagePath(image);
-
-    const datePublished = getPublicationDate();
 
     const authorJSONLD = {
       "@type": "Person",
@@ -53,21 +40,21 @@ class SEO extends Component {
       address: config.userLocation,
     };
 
-    const logoJSONLD = {
-      "@type": "ImageObject",
-      url: getImagePath(config.siteLogo),
-    };
-
     const blogURL = config.getFullPath("/");
-    const schemaOrgJSONLD = [
-      {
-        "@context": "http://schema.org",
-        "@type": "WebSite",
-        url: blogURL,
-        name: title,
-      },
-    ];
+    const schemaOrgJSONLD = [];
+
+    // TODO: separate this logic
     if (postSEO) {
+      const getPublicationDate = () => {
+        if (!postNode) return null;
+        if (!postNode.frontmatter) return null;
+        if (!postNode.frontmatter.date) return null;
+
+        return postNode.frontmatter.date;
+      };
+      
+      const datePublished = getPublicationDate();
+
       schemaOrgJSONLD.push(
         {
           "@context": "http://schema.org",
@@ -76,32 +63,29 @@ class SEO extends Component {
             {
               "@type": "ListItem",
               position: 1,
-              item: {
-                "@id": postURL,
-                name: title,
-                image,
-              },
+              name: title,
             },
           ],
         },
         {
           "@context": "http://schema.org",
           "@type": "BlogPosting",
-          url: blogURL,
-          name: title,
-          headline: title,
-          image: { "@type": "ImageObject", url: image },
-          author: authorJSONLD,
-          publisher: {
-            ...authorJSONLD,
-            "@type": "Organization",
-            logo: logoJSONLD,
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": postURL
           },
+          headline: title,
+          image: {
+            "@type": "ImageObject",
+            url: image
+          },
+          author: authorJSONLD,
           datePublished,
-          description,
+          dateModified: datePublished, // TODO: add modified date
         }
       );
     }
+
     return (
       <Helmet>
         {/* General tags */}
