@@ -75,12 +75,12 @@ module.exports = {
         ]
       }
     },
-    config.googleAnalyticsID ? {
-      resolve: "gatsby-plugin-google-analytics",
+    {
+      resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingId: config.googleAnalyticsID
+        trackingIds: [config.googleAnalyticsID]
       }
-    } : null,
+    },
     {
       resolve: "gatsby-plugin-nprogress",
       options: {
