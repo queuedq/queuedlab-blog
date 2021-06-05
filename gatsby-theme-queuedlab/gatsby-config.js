@@ -75,12 +75,12 @@ module.exports = {
         ]
       }
     },
-    // {
-    //   resolve: "gatsby-plugin-google-analytics",
-    //   options: {
-    //     trackingId: config.googleAnalyticsID
-    //   }
-    // },
+    config.googleAnalyticsID ? {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: config.googleAnalyticsID
+      }
+    } : null,
     {
       resolve: "gatsby-plugin-nprogress",
       options: {
@@ -180,5 +180,5 @@ module.exports = {
       }
     },
     "gatsby-plugin-cname",
-  ]
+  ].filter(plugin => plugin != null)
 };
