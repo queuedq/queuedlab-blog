@@ -1,7 +1,7 @@
 import React from "react";
 import _ from "lodash";
 import { Link, graphql } from "gatsby";
-import config from "../../../data/SiteConfig";
+import config from "../../../data/site-config";
 import moment from "../../utils/moment";
 import * as style from "./PostListing.module.scss";
 

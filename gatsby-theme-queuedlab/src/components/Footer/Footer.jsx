@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { withPrefix } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRss } from "@fortawesome/free-solid-svg-icons";
-import config from "../../../data/SiteConfig";
+import config from "../../../data/site-config";
 import UserLinks from "../UserLinks/UserLinks";
 import * as style from "./Footer.module.scss";
 

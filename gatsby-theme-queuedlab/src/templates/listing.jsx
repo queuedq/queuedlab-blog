@@ -5,7 +5,7 @@ import classnames from "classnames";
 import Layout from "../layout";
 import PostListing from "../components/PostListing/PostListing";
 import SEO from "../components/SEO/SEO";
-import config from "../../data/SiteConfig";
+import config from "../../data/site-config";
 import * as style from "./listing.module.scss";
 
 

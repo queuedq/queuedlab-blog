@@ -1,4 +1,4 @@
-const config = require("./data/SiteConfig");
+const config = require("./data/site-config");
 
 // Make sure that pathPrefix is not empty
 const validatedPathPrefix = config.pathPrefix === "" ? "/" : config.pathPrefix;

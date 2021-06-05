@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import config from "../../../data/SiteConfig";
+import config from "../../../data/site-config";
 import * as style from "./UserLinks.module.scss";
 
 const services = {

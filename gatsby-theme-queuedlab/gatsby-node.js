@@ -4,7 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const _ = require("lodash");
 const moment = require('moment-timezone');
-const siteConfig = require("./data/SiteConfig");
+const siteConfig = require("./data/site-config");
 
 moment.tz.setDefault(siteConfig.siteTimezone);
 

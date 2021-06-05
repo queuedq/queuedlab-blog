@@ -2,7 +2,7 @@ import React from "react";
 import _ from "lodash";
 import { Helmet } from "react-helmet";
 import { Link, graphql } from "gatsby";
-import config from "../../data/SiteConfig";
+import config from "../../data/site-config";
 import moment from "../utils/moment";
 import Layout from "../layout";
 import PostTags from "../components/PostTags/PostTags";
