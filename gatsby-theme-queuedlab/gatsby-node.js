@@ -27,7 +27,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
     type Frontmatter {
       title: String!
-      date: String!
+      date: Date!
       category: String
       tags: [String!]
       cover: String
