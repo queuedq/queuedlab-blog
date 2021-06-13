@@ -1,0 +1,13 @@
+interface BlogPost implements Node {
+  id: ID!
+  title: String!
+  body: String!
+  slug: String!
+  date: Date!
+  category: String
+  tags: [String!]
+  cover: File
+  coverAlt: String
+  summary: String
+  excerpt: String!
+}

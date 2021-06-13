@@ -4,6 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const _ = require("lodash");
 const moment = require('moment-timezone');
+const { parentResolverPassthrough } = require('./gatsby/utils');
 const siteConfig = require("./data/site-config");
 
 moment.tz.setDefault(siteConfig.siteTimezone);
@@ -18,7 +19,8 @@ exports.onPreBootstrap = ({ reporter }) => {
 }
 
 // Post frontmatter schema
-exports.createSchemaCustomization = ({ actions }) => {
+exports.createSchemaCustomization = ({ actions, schema }) => {
+  // TODO: Don't extend MarkdownRemark
   const { createTypes } = actions
   const typeDefs = `
     type MarkdownRemark implements Node {
@@ -38,12 +40,51 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
   `
   createTypes(typeDefs)
+  
+  // Custom types
+  const types = fs.readFileSync(require.resolve("./gatsby/schema.graphql"), "utf-8");
+  createTypes(types);
+
+  // Arguments for passthrough resolvers can be found at
+  // https://github.com/gatsbyjs/gatsby/blob/c87d1d116e33eb693f65bcfc57cc63b072fe4a5c/packages/gatsby-transformer-remark/src/extend-node-type.js#L555
+  const RemarkBlogPost = schema.buildObjectType({
+    name: "RemarkBlogPost",
+    fields: {
+      id: { type: "ID!" },
+      title: { type: "String!" },
+      body: {
+        type: "String!",
+        resolve: parentResolverPassthrough("html"),
+      },
+      slug: { type: "String!" },
+      date: { type: "Date!", extensions: { dateformat: {} } },
+      category: { type: "String" },
+      tags: { type: "[String!]" },
+      cover: { type: "File", extensions: { fileByRelativePath: {} } },
+      coverAlt: { type: "String" },
+      summary: { type: "String" },
+      excerpt: {
+        type: "String!",
+        args: {
+          pruneLength: { type: "Int", defaultValue: 140 },
+          truncate: { type: "Boolean", defaultValue: false },
+          format: { type: "MarkdownExcerptFormats", defaultValue: "PLAIN" },
+        },
+        resolve: parentResolverPassthrough("excerpt"),
+      },
+    },
+    interfaces: ["Node", "BlogPost"],
+    extensions: { infer: false },
+  });
+
+  createTypes(RemarkBlogPost);
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
+exports.onCreateNode = async ({ node, actions, getNode, createNodeId, createContentDigest }) => {
+  const { createNodeField, createNode } = actions;
   let slug;
   if (node.internal.type === "MarkdownRemark") {
+    // TODO: Don't extend MarkdownRemark
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
     if (
@@ -69,6 +110,28 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       }
     }
     createNodeField({ node, name: "slug", value: slug });
+
+    // Create nodes for custom types
+    const remarkBlogPostId = createNodeId(`${node.id} >>> RemarkBlogPost`);
+    const fieldData = {
+      title: node.frontmatter.title,
+      slug,
+      date: node.frontmatter.date,
+      category: node.frontmatter.category,
+      tags: node.frontmatter.tags,
+      cover: node.frontmatter.cover,
+      coverAlt: node.frontmatter.coverAlt,
+    };
+  
+    await createNode({
+      ...fieldData,
+      id: remarkBlogPostId,
+      parent: node.id,
+      internal: {
+        type: 'RemarkBlogPost',
+        contentDigest: createContentDigest(fieldData),
+      }
+    });
   }
 };
 
