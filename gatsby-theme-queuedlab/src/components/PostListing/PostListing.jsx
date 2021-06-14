@@ -16,7 +16,7 @@ class PostListing extends React.Component {
         cover: postEdge.node.frontmatter.cover,
         title: postEdge.node.frontmatter.title,
         summary: postEdge.node.frontmatter.summary,
-        date: moment(postEdge.node.fields.date).format(config.dateFormat),
+        date: moment(postEdge.node.frontmatter.date).format(config.dateFormat),
         excerpt: postEdge.node.excerpt,
         timeToRead: postEdge.node.timeToRead
       });
@@ -60,6 +60,7 @@ export const query = graphql`
     timeToRead
     frontmatter {
       title
+      date
       category
       tags
       cover
