@@ -7,7 +7,6 @@ const Page = ({index, current, linkPrefix}) => {
   const isCurrentPage = index === current;
   return (
     <Link
-      key={index}
       to={`${linkPrefix}/${index}/`}
       className={classnames([style.page, isCurrentPage && style.current])}
     >
@@ -27,8 +26,14 @@ const Pagination = ({count, current, linkPrefix}) => {
       {!isFirstPage &&
         <Link to={prevPage} className={style.page}>Previous</Link>
       }
-      {[...Array(count)].map((_val, index) => (
-        <Page index={index+1} current={current} linkPrefix={linkPrefix} />
+      {[...Array(count)].map((_, index) => (
+        <Page
+          // eslint-disable-next-line react/no-array-index-key
+          key={index}
+          index={index+1}
+          current={current}
+          linkPrefix={linkPrefix}
+        />
       ))}
       {!isLastPage &&
         <Link to={nextPage} className={style.page}>Next</Link>
