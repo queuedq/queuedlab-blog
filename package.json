@@ -5,7 +5,10 @@
   "repository": "git@github.com:queuedq/queuedlab-blog.git",
   "author": "queuedq",
   "license": "MIT",
-  "workspaces": ["gatsby-theme-queuedlab", "main-blog"],
+  "workspaces": [
+    "gatsby-theme-queuedlab",
+    "main-blog"
+  ],
   "scripts": {
     "dev": "yarn workspace main-blog run dev",
     "develop": "yarn workspace main-blog run develop",
