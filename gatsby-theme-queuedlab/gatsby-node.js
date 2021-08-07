@@ -182,7 +182,7 @@ exports.createPages = async ({ graphql, actions }) => {
     component: allPostsPage,
     context: {
       limit: postsPerPage,
-      skip: postsPerPage,
+      skip: 0,
       pageCount,
       currentPageNum: 1,
     },
