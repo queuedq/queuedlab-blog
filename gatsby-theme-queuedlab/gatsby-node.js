@@ -140,7 +140,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const postPage = require.resolve("./src/templates/post.jsx");
   const tagPage = require.resolve("./src/templates/tag.jsx");
   const categoryPage = require.resolve("./src/templates/category.jsx");
-  const listingPage = require.resolve("./src/templates/listing.jsx");
+  const allPostsPage = require.resolve("./src/templates/all-posts.jsx");
 
   // Get a full list of markdown posts
   const markdownQueryResult = await graphql(`
@@ -177,10 +177,21 @@ exports.createPages = async ({ graphql, actions }) => {
   const { postsPerPage } = siteConfig;
   const pageCount = Math.ceil(postsEdges.length / postsPerPage);
 
+  createPage({
+    path: "/",
+    component: allPostsPage,
+    context: {
+      limit: postsPerPage,
+      skip: postsPerPage,
+      pageCount,
+      currentPageNum: 1,
+    },
+  });
+
   [...Array(pageCount)].forEach((_val, pageNum) => {
     createPage({
-      path: pageNum === 0 ? `/` : `/${pageNum + 1}/`,
-      component: listingPage,
+      path: `/${pageNum + 1}/`,
+      component: allPostsPage,
       context: {
         limit: postsPerPage,
         skip: pageNum * postsPerPage,

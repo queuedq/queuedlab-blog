@@ -3,33 +3,34 @@ import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 import Layout from "../layout";
 import PostList from "../components/PostList/PostList";
+import Pagination from "../components/PostList/Pagination";
+import SEO from "../components/SEO/SEO";
 import config from "../../data/site-config";
 import { getPosts } from "../resolvers/posts";
 
-const CategoryPosts = ({ data, pageContext }) => {
-  const { category } = pageContext;
+const AllPosts = ({ data, pageContext }) => {
+  const { pageCount, currentPageNum } = pageContext;
   const posts = getPosts(data);
 
   return (
     <Layout>
-      <div className="category-container">
-        <Helmet title={`Posts in category "${category}" | ${config.siteTitle}`} />
-        <PostList posts={posts} />
-      </div>
+      <Helmet title={config.siteTitle} />
+      <SEO />
+      <PostList posts={posts} />
+      <Pagination count={pageCount} current={currentPageNum} linkPrefix="" />
     </Layout>
   );
 }
 
-export default CategoryPosts;
+export default AllPosts;
 
 export const query = graphql`
-query categoryPosts($category: String) {
+query allPosts($skip: Int!, $limit: Int!) {
   allMarkdownRemark(
-    limit: 1000
     sort: { fields: [frontmatter___date], order: DESC }
-    filter: { frontmatter: { category: { eq: $category } } }
+    limit: $limit
+    skip: $skip
   ) {
-    totalCount
     edges {
       node {
         ...PostMetadata

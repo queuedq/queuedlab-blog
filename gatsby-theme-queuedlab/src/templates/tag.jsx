@@ -1,39 +1,40 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
+import { Helmet } from "react-helmet";
 import Layout from "../layout";
-import PostListing from "../components/PostListing/PostListing";
+import PostList from "../components/PostList/PostList";
 import config from "../../data/site-config";
+import { getPosts } from "../resolvers/posts";
 
-export default class TagTemplate extends React.Component {
-  render() {
-    const { tag } = this.props.pageContext;
-    const postEdges = this.props.data.allMarkdownRemark.edges;
-    return (
-      <Layout>
-        <div className="tag-container">
-          <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
-          <PostListing postEdges={postEdges} />
-        </div>
-      </Layout>
-    );
-  }
+const CategoryPosts = ({ data, pageContext }) => {
+  const { tag } = pageContext;
+  const posts = getPosts(data);
+
+  return (
+    <Layout>
+      <div className="tag-container">
+        <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
+        <PostList posts={posts} />
+      </div>
+    </Layout>
+  );
 }
 
-/* eslint no-undef: "off" */
-export const pageQuery = graphql`
-  query TagPage($tag: String) {
-    allMarkdownRemark(
-      limit: 1000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
-    ) {
-      totalCount
-      edges {
-        node {
-          ...PostMetadata
-        }
+export default CategoryPosts;
+
+export const query = graphql`
+query TagPosts($tag: String) {
+  allMarkdownRemark(
+    limit: 1000
+    sort: { fields: [frontmatter___date], order: DESC }
+    filter: { frontmatter: { tags: { in: [$tag] } } }
+  ) {
+    totalCount
+    edges {
+      node {
+        ...PostMetadata
       }
     }
   }
+}
 `;
