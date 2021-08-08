@@ -1,10 +1,10 @@
-@import "../sass/variables/index";
+@import "../../sass/variables/index";
 
 .postContainer {
   margin-top: spacing(4);
 }
 
-.titleContainer {
+.header {
   display: flex;
   flex-direction: column;
 
