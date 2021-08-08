@@ -2,9 +2,9 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 import Layout from "../layout";
-import PostList from "../components/PostList/PostList";
-import Pagination from "../components/PostList/Pagination";
-import SEO from "../components/SEO/SEO";
+import PostList from "../components/post/PostList";
+import Pagination from "../components/post/Pagination";
+import SEO from "../components/layout/SEO";
 import config from "../../data/site-config";
 import { getPosts } from "../resolvers/posts";
 

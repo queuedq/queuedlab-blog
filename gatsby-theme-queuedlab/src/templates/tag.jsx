@@ -2,7 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 import Layout from "../layout";
-import PostList from "../components/PostList/PostList";
+import PostList from "../components/post/PostList";
 import config from "../../data/site-config";
 import { getPosts } from "../resolvers/posts";
 
