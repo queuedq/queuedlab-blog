@@ -26,21 +26,3 @@ const PostList = ({ posts }) => (
 );
 
 export default PostList;
-
-export const query = graphql`
-  fragment PostMetadata on MarkdownRemark {
-    excerpt
-    timeToRead
-    frontmatter {
-      title
-      date
-      category
-      tags
-      cover
-      summary
-    }
-    fields {
-      slug
-    }
-  }
-`
