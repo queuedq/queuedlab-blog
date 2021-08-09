@@ -121,6 +121,7 @@ exports.onCreateNode = async ({ node, actions, getNode, createNodeId, createCont
       tags: node.frontmatter.tags,
       cover: node.frontmatter.cover,
       coverAlt: node.frontmatter.coverAlt,
+      summary: node.frontmatter.summary,
     };
   
     await createNode({
