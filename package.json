@@ -11,7 +11,8 @@
   ],
   "scripts": {
     "dev": "yarn workspace main-blog run dev",
-    "develop": "yarn workspace main-blog run develop",
-    "deploy": "yarn workspace main-blog run deploy"
+    "dev:theme": "yarn workspace gatsby-theme-queuedlab run dev",
+    "deploy": "yarn workspace main-blog run deploy",
+    "clean": "yarn workspace gatsby-theme-queuedlab run clean && yarn workspace main-blog run clean"
   }
 }
