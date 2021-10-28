@@ -1,20 +1,15 @@
 import { graphql } from "gatsby";
 
 // eslint-disable-next-line import/prefer-default-export
-export const query = graphql`
-fragment PostMetadata on MarkdownRemark {
+export const postMetadata = graphql`
+fragment PostMetadata on RemarkBlogPost {
+  title
+  body
+  slug
+  date
+  category
+  tags
+  summary
   excerpt
-  timeToRead
-  frontmatter {
-    title
-    date
-    category
-    tags
-    cover
-    summary
-  }
-  fields {
-    slug
-  }
 }
 `;

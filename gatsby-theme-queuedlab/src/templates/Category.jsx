@@ -32,14 +32,7 @@ query categoryPosts($category: String) {
     totalCount
     edges {
       node {
-        title
-        body
-        slug
-        date
-        category
-        tags
-        summary
-        excerpt
+        ...PostMetadata
       }
     }
   }

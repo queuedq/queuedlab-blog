@@ -33,14 +33,7 @@ query allPosts($skip: Int!, $limit: Int!) {
   ) {
     edges {
       node {  
-        title
-        body
-        slug
-        date
-        category
-        tags
-        summary
-        excerpt
+        ...PostMetadata
       }
     }
   }
