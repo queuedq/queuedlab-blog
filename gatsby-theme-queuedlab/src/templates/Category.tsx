@@ -1,14 +1,14 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
+import { fromRemarkPosts } from "../models/post";
 import Layout from "../layout";
 import PostList from "../components/post/PostList";
 import config from "../../data/site-config";
-import { getRemarkBlogPostList } from "../resolvers/post";
 
 const CategoryPosts = ({ data, pageContext }) => {
   const { category } = pageContext;
-  const posts = getRemarkBlogPostList(data.allRemarkBlogPost.edges);
+  const posts = fromRemarkPosts(data.allRemarkBlogPost.edges);
 
   return (
     <Layout>

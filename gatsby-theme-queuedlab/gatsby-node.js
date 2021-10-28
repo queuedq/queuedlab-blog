@@ -139,9 +139,9 @@ exports.onCreateNode = async ({ node, actions, getNode, createNodeId, createCont
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const postPage = require.resolve("./src/templates/Post.tsx");
-  const tagPage = require.resolve("./src/templates/Tag.jsx");
-  const categoryPage = require.resolve("./src/templates/Category.jsx");
-  const allPostsPage = require.resolve("./src/templates/AllPosts.jsx");
+  const tagPage = require.resolve("./src/templates/Tag.tsx");
+  const categoryPage = require.resolve("./src/templates/Category.tsx");
+  const allPostsPage = require.resolve("./src/templates/AllPosts.tsx");
 
   // Get a full list of markdown posts
   const markdownQueryResult = await graphql(`
