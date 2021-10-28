@@ -8,10 +8,6 @@ import * as style from "./Footer.module.scss";
 
 class Footer extends Component {
   render() {
-    const { copyright } = config;
-    if (!copyright) {
-      return null;
-    }
     return (
       <footer className={style.footer}>
         <UserLinks />
