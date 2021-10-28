@@ -6,11 +6,11 @@ import PostList from "../components/post/PostList";
 import Pagination from "../components/post/Pagination";
 import SEO from "../components/layout/SEO";
 import config from "../../data/site-config";
-import { getPosts } from "../resolvers/posts";
+import { getRemarkBlogPostList } from "../resolvers/post";
 
 const AllPosts = ({ data, pageContext }) => {
   const { pageCount, currentPageNum } = pageContext;
-  const posts = getPosts(data);
+  const posts = getRemarkBlogPostList(data.allRemarkBlogPost.edges);
 
   return (
     <Layout>
@@ -26,14 +26,21 @@ export default AllPosts;
 
 export const query = graphql`
 query allPosts($skip: Int!, $limit: Int!) {
-  allMarkdownRemark(
-    sort: { fields: [frontmatter___date], order: DESC }
+  allRemarkBlogPost(
+    sort: { fields: [date], order: DESC }
     limit: $limit
     skip: $skip
   ) {
     edges {
-      node {
-        ...PostMetadata
+      node {  
+        title
+        body
+        slug
+        date
+        category
+        tags
+        summary
+        excerpt
       }
     }
   }

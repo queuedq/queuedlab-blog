@@ -1,7 +1,6 @@
 import React from "react";
 import _ from "lodash";
 import { Link } from "gatsby";
-import config from "../../../data/site-config";
 import PostTags from "./PostTags";
 import * as style from "./post.module.scss";
 import "./b16-tomorrow-dark.scss";
@@ -18,7 +17,7 @@ const Post = ({ post: { title, category, summary, date, body, tags } }) => (
       )}
       {summary && <div className={style.summary}>{summary}</div>}
       <time className={style.date}>
-        {date.format(config.dateFormat)}
+        {date}
       </time>
     </div>
     <div

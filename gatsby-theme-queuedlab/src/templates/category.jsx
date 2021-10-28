@@ -4,11 +4,11 @@ import { Helmet } from "react-helmet";
 import Layout from "../layout";
 import PostList from "../components/post/PostList";
 import config from "../../data/site-config";
-import { getPosts } from "../resolvers/posts";
+import { getRemarkBlogPostList } from "../resolvers/post";
 
 const CategoryPosts = ({ data, pageContext }) => {
   const { category } = pageContext;
-  const posts = getPosts(data);
+  const posts = getRemarkBlogPostList(data.allRemarkBlogPost.edges);
 
   return (
     <Layout>
@@ -24,15 +24,22 @@ export default CategoryPosts;
 
 export const query = graphql`
 query categoryPosts($category: String) {
-  allMarkdownRemark(
+  allRemarkBlogPost(
     limit: 1000
-    sort: { fields: [frontmatter___date], order: DESC }
-    filter: { frontmatter: { category: { eq: $category } } }
+    sort: { fields: [date], order: DESC }
+    filter: { category: { eq: $category } }
   ) {
     totalCount
     edges {
       node {
-        ...PostMetadata
+        title
+        body
+        slug
+        date
+        category
+        tags
+        summary
+        excerpt
       }
     }
   }
