@@ -138,7 +138,7 @@ exports.onCreateNode = async ({ node, actions, getNode, createNodeId, createCont
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  const postPage = require.resolve("./src/templates/Post.jsx");
+  const postPage = require.resolve("./src/templates/Post.tsx");
   const tagPage = require.resolve("./src/templates/Tag.jsx");
   const categoryPage = require.resolve("./src/templates/Category.jsx");
   const allPostsPage = require.resolve("./src/templates/AllPosts.jsx");

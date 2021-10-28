@@ -1,12 +1,16 @@
 import React from "react";
 import _ from "lodash";
 import { Link } from "gatsby";
+import { Post } from "../../models/post";
+import { formatDate } from "../../utils/date";
 import PostTags from "./PostTags";
-import * as style from "./post.module.scss";
+import * as style from "./Post.module.scss";
 import "./b16-tomorrow-dark.scss";
 import "katex/dist/katex.min.css";
 
-const Post = ({ post: { title, category, summary, date, body, tags } }) => (
+const PostComponent: React.FunctionComponent<{ post: Post }> = ({
+  post: { title, category, summary, datePublished, body, tags },
+}) => (
   <div className={style.postContainer}>
     <div className={style.header}>
       <h1>{title}</h1>
@@ -17,7 +21,7 @@ const Post = ({ post: { title, category, summary, date, body, tags } }) => (
       )}
       {summary && <div className={style.summary}>{summary}</div>}
       <time className={style.date}>
-        {date}
+        {formatDate(datePublished)}
       </time>
     </div>
     <div
@@ -28,4 +32,4 @@ const Post = ({ post: { title, category, summary, date, body, tags } }) => (
   </div>
 );
 
-export default Post;
+export default PostComponent;
