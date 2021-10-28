@@ -1,12 +1,13 @@
 import React from "react";
 import _ from "lodash";
 import { Link } from "gatsby";
+import config from "../../../data/site-config";
 import PostTags from "./PostTags";
 import * as style from "./post.module.scss";
 import "./b16-tomorrow-dark.scss";
 import "katex/dist/katex.min.css";
 
-const Post = ({ post: { title, category, summary, date, bodyHtml, tags } }) => (
+const Post = ({ post: { title, category, summary, date, body, tags } }) => (
   <div className={style.postContainer}>
     <div className={style.header}>
       <h1>{title}</h1>
@@ -17,12 +18,12 @@ const Post = ({ post: { title, category, summary, date, bodyHtml, tags } }) => (
       )}
       {summary && <div className={style.summary}>{summary}</div>}
       <time className={style.date}>
-        {date}
+        {date.format(config.dateFormat)}
       </time>
     </div>
     <div
       className={style.content}
-      dangerouslySetInnerHTML={{ __html: bodyHtml }}
+      dangerouslySetInnerHTML={{ __html: body }}
     />
     <PostTags tags={tags} />
   </div>

@@ -1,17 +1,16 @@
 import moment from "../utils/moment";
-import config from "../../data/site-config";
 
 // eslint-disable-next-line import/prefer-default-export
-export function getPost(data) {
-  const post = data.markdownRemark;
-  const { frontmatter } = post;
-  const { title, category, summary, date, tags } = frontmatter;
+export function getRemarkBlogPost(data) {
+  const { title, body, slug, date, category, tags, summary, excerpt } = data;
   return {
     title,
+    body,
+    slug,
+    date: moment(date),
     category,
-    summary,
-    date: moment(date).format(config.dateFormat),
-    bodyHtml: post.html,
     tags,
+    summary,
+    excerpt
   };
 }
