@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
-import Layout from "../layout";
+import Layout from "../components/layout/Layout.tsx";
 import config from "../../data/site-config";
 
 class AboutPage extends Component {
