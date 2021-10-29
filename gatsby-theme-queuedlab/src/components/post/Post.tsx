@@ -8,9 +8,13 @@ import * as style from "./Post.module.scss";
 import "./b16-tomorrow-dark.scss";
 import "katex/dist/katex.min.css";
 
-const PostComponent: React.FunctionComponent<{ post: Post }> = ({
+type PostComponentProps = {
+  post: Post
+};
+
+const PostComponent = ({
   post: { title, category, summary, datePublished, body, tags },
-}) => (
+}: PostComponentProps) => (
   <div className={style.postContainer}>
     <div className={style.header}>
       <h1>{title}</h1>

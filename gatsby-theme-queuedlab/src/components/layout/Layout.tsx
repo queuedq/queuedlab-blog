@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import "../../sass/main.scss";
 import * as style from "./Layout.module.scss";
 
-interface LayoutProps {
+type LayoutProps = {
   children: React.ReactNode;
 };
 
