@@ -1,9 +1,8 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
-import config from "../../data/site-config";
 import Layout from "../components/layout/Layout";
 import Post from "../components/post/Post";
+import Seo from "../components/seo/Seo";
 import { fromRemarkPost } from "../models/post";
 
 const PostTemplate = ({ data }) => {
@@ -11,11 +10,7 @@ const PostTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <Helmet>
-        <title>{`${post.title} | ${config.siteTitle}`}</title>
-      </Helmet>
-      {/* TODO: fix SEO */}
-      {/* <SEO postPath={slug} postNode={data.markdownRemark} postSEO /> */}
+      <Seo post={post} />
       <Post post={post} />
     </Layout>
   );

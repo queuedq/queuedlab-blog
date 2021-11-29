@@ -1,12 +1,10 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Helmet } from "react-helmet";
 import { fromRemarkPosts } from "../models/post";
 import Layout from "../components/layout/Layout";
 import PostList from "../components/post/PostList";
 import Pagination from "../components/post/Pagination";
-import SEO from "../components/layout/SEO";
-import config from "../../data/site-config";
+import Seo from "../components/seo/Seo";
 
 const AllPosts = ({ data, pageContext }) => {
   const { pageCount, currentPageNum } = pageContext;
@@ -14,8 +12,7 @@ const AllPosts = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Helmet title={config.siteTitle} />
-      <SEO />
+      <Seo />
       <PostList posts={posts} />
       <Pagination count={pageCount} current={currentPageNum} linkPrefix="" />
     </Layout>

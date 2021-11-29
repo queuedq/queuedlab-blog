@@ -1,10 +1,9 @@
 import React from "react";
 import { graphql } from "gatsby";
-import { Helmet } from "react-helmet";
 import { fromRemarkPosts } from "../models/post";
 import Layout from "../components/layout/Layout";
 import PostList from "../components/post/PostList";
-import config from "../../data/site-config";
+import Seo from "../components/seo/Seo";
 
 const CategoryPosts = ({ data, pageContext }) => {
   const { tag } = pageContext;
@@ -12,10 +11,9 @@ const CategoryPosts = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <div className="tag-container">
-        <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
-        <PostList posts={posts} />
-      </div>
+      <h1>태그: {tag}</h1> {/* TODO: style this */}
+      <Seo subpage={`태그: ${tag}`}/>
+      <PostList posts={posts} />
     </Layout>
   );
 }

@@ -14,6 +14,8 @@ export type Post = {
   url: string;  // relative to path prefix
 }
 
+export const postDescription = (post: Post) => post.summary || post.excerpt;
+
 export function fromRemarkPost(node): Post {
   const { title, body, slug, date, category, tags, summary, excerpt } = node;
   return {
