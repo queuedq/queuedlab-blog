@@ -25,7 +25,7 @@ tags:
 ## Rust를 선택한 이유
 왜 하필 Rust로 만들었냐구요? Dancing links가 효율적인 알고리즘이라고 하더라도, 기본적으로 실행에 exponential한 시간이 드는 백트래킹 알고리즘이기 때문에 문제의 크기가 조금만 커져도 해결하는 시간이 오래 걸립니다. 그래서 성능을 최우선으로 고려했습니다. 또한 실행 시간이 오래 걸리기 때문에, 알고리즘의 실행 도중 일시정지하거나 진행도를 받아오는 기능도 상당히 중요하다고 생각했습니다. 이를 위해서는 알고리즘을 별도의 스레드에서 실행하는 비동기 API가 필요했고, 스레드 안정성을 보장해 주는 Rust가 제격이라고 생각했습니다.
 
-그 외에도 평소에 Rust를 강력 추천하고 다니는 러스토랑스 친구 [김유진](https://github.com/yujingaya)의 영향으로, 한번쯤 공부해 보고 싶었기 때문이기도 합니다. 기본적인 higher-order function 뿐만 아니라 immutability by default, null safety, ADT와 pattern matching, type class의 경량화 버전인 trait 등 모던 함수형 언어 기능들을 두루 갖추고 있다는 점에 끌렸거든요. 모든 Rust 초심자들이 그렇듯 ownership과 lifetime의 개념이 생소해서 배우는 데 어려움이 있긴 했지만, [공식 안내서](https://doc.rust-lang.org/book/)와 컴파일러와 유진이가 친절하게 알려 줘서 금방 적응할 수 있었습니다. 코드를 대충 작성하면 컴파일이 안 된다는 점은 오히려 제 코드의 안전성을 실시간으로 보장해 준다는 느낌을 줘서 안정감 있는 코딩이 가능했습니다.
+그 외에도 평소에 Rust를 강력 추천하고 다니는 러스토랑스 친구 [김유진 (yujingaya)](https://github.com/yujingaya)의 영향으로, 한번쯤 공부해 보고 싶었기 때문이기도 합니다. 기본적인 higher-order function 뿐만 아니라 immutability by default, null safety, ADT와 pattern matching, type class의 경량화 버전인 trait 등 모던 함수형 언어 기능들을 두루 갖추고 있다는 점에 끌렸거든요. 모든 Rust 초심자들이 그렇듯 ownership과 lifetime의 개념이 생소해서 배우는 데 어려움이 있긴 했지만, [공식 안내서](https://doc.rust-lang.org/book/)와 컴파일러와 유진이가 친절하게 알려 줘서 금방 적응할 수 있었습니다. 코드를 대충 작성하면 컴파일이 안 된다는 점은 오히려 제 코드의 안전성을 실시간으로 보장해 준다는 느낌을 줘서 안정감 있는 코딩이 가능했습니다.
 
 ## 개발 현황
 생각날 때마다 틈틈이 진행한 프로젝트라서 개발 진행은 듬성듬성 이루어졌습니다.
