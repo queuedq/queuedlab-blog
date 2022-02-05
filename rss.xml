@@ -1,4 +1,62 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[queuedlab]]></title><description><![CDATA[queued의 블로그]]></description><link>https://blog.queuedlab.com/</link><image><url>https://blog.queuedlab.com/icons/icon-512x512.png</url><title>queuedlab</title><link>https://blog.queuedlab.com/</link></image><generator>GatsbyJS Advanced Starter</generator><lastBuildDate>Mon, 29 Nov 2021 21:56:30 GMT</lastBuildDate><atom:link href="https://blog.queuedlab.com/rss.xml" rel="self" type="application/rss+xml"/><copyright><![CDATA[Copyright © 2021. queued]]></copyright><item><title><![CDATA[2021년 상반기에 참가한 알고리즘 대회]]></title><description><![CDATA[…]]></description><link>https://blog.queuedlab.com//competitions-2021-first-half</link><guid isPermaLink="false">https://blog.queuedlab.com//competitions-2021-first-half</guid><category><![CDATA[PS]]></category><pubDate>Tue, 18 May 2021 18:06:04 GMT</pubDate><content:encoded>&lt;p&gt;항상 대회가 끝나면 블로그에 후기글을 올려야겠다고 다짐하지만, 요즘 학교 과제와 동아리 일 등으로 바쁘다 보니 장문의 후기글을 쓰는 것이 부담스럽게 다가옵니다. 그래서 우선 참가한 대회 목록이라도 짤막하게 정리해 보려고 합니다. 매년 상반기보다는 하반기에 대회가 더 많이 열리기 때문에, 참가한 대회가 많지는 않습니다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[queuedlab]]></title><description><![CDATA[queued의 블로그]]></description><link>https://blog.queuedlab.com/</link><image><url>https://blog.queuedlab.com/icons/icon-512x512.png</url><title>queuedlab</title><link>https://blog.queuedlab.com/</link></image><generator>GatsbyJS Advanced Starter</generator><lastBuildDate>Sat, 05 Feb 2022 14:44:48 GMT</lastBuildDate><atom:link href="https://blog.queuedlab.com/rss.xml" rel="self" type="application/rss+xml"/><copyright><![CDATA[Copyright © 2021. queued]]></copyright><item><title><![CDATA[Rust 라이브러리 exact-cover 공개!]]></title><description><![CDATA[개인 프로젝트로 만들던 Rust 라이브러리 exact-cover를 이번 설 연휴에 crates.io에 배포했습니다! 🎉 아직 원하는 수준의 기능들이 완성되진 않았지만, 기본적인 exact cover…]]></description><link>https://blog.queuedlab.com//exact-cover-rs-published</link><guid isPermaLink="false">https://blog.queuedlab.com//exact-cover-rs-published</guid><category><![CDATA[exact-cover]]></category><category><![CDATA[puzzle]]></category><pubDate>Sat, 05 Feb 2022 14:00:00 GMT</pubDate><content:encoded>&lt;p&gt;개인 프로젝트로 만들던 Rust 라이브러리 exact-cover를 이번 설 연휴에 crates.io에 배포했습니다! 🎉 아직 원하는 수준의 기능들이 완성되진 않았지만, 기본적인 exact cover 문제를 풀 수는 있기 때문에 우선 라이브러리 이름을 먹어두려고 + 뭔가 완성했다는 기분을 내고 싶어서 배포했습니다. 첫 Rust 프로젝트이자 첫 라이브러리 개발이라 성취감이 큽니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/queuedq/exact-cover-rs&quot;&gt;레포지토리 (GitHub)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://crates.io/crates/exact-cover&quot;&gt;Crate 정보 (crates.io)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.rs/exact-cover&quot;&gt;도큐멘테이션 (docs.rs)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;무엇을 하는 라이브러리인가요?&lt;/h2&gt;
+&lt;p&gt;폴리오미노 타일링, 스도쿠, N-퀸 문제 등 많은 퍼즐 문제들은 &lt;a href=&quot;https://en.wikipedia.org/wiki/Exact_cover&quot;&gt;exact cover&lt;/a&gt; 문제로 모델링할 수 있습니다. exact cover 문제는 NP-complete이기 때문에, 백트래킹을 통해 완전탐색을 하는 방식으로 답을 찾습니다. 이 백트래킹 알고리즘을 &lt;a href=&quot;https://en.wikipedia.org/wiki/Knuth%27s_Algorithm_X&quot;&gt;Knuth’s Algorithm X&lt;/a&gt;라고 부르고, 마찬가지로 Donald Knuth가 개발한 &lt;a href=&quot;https://en.wikipedia.org/wiki/Dancing_Links&quot;&gt;dancing links (DLX)&lt;/a&gt;라는 테크닉을 이용하면 더 효율적으로 백트래킹을 수행할 수 있습니다. exact-cover 라이브러리는 이러한 exact cover 문제를 푸는 알고리즘을 사용하기 편리한 API의 형태로 제공해 주는 라이브러리입니다.&lt;/p&gt;
+&lt;h2&gt;개발 동기&lt;/h2&gt;
+&lt;p&gt;라이브러리를 개발하게 된 동기는 제가 디자인한 퍼즐들을 검증하기 위해서였습니다. 퍼즐계에서는 이런 용도로 &lt;a href=&quot;http://burrtools.sourceforge.net/&quot;&gt;Burr Tools&lt;/a&gt;라는 오픈 소스 프로그램이 가장 널리 사용됩니다. Burr Tools는 다양한 기능을 제공하는 최고의 프로그램이지만, 아무래도 일반적인 조건 하에서만 문제를 해결해 주기 때문에 저만의 새로운 조건을 추가한 퍼즐을 검증하기에는 어려움이 있었습니다. 그래서 저는 제 퍼즐의 기본 틀을 exact cover로 모델링한 뒤 답 중 조건에 맞는 것들만 골라내는 방식으로 해결하기로 했습니다. Exact cover 문제를 푸는 라이브러리는 많지만, 제 필요에 맞는 API를 디자인하고 싶었고 직접 한번 구현도 해보고 싶어서 이 라이브러리를 만들게 되었습니다.&lt;/p&gt;
+&lt;h2&gt;Rust를 선택한 이유&lt;/h2&gt;
+&lt;p&gt;왜 하필 Rust로 만들었냐구요? Dancing links가 효율적인 알고리즘이라고 하더라도, 기본적으로 실행에 exponential한 시간이 드는 백트래킹 알고리즘이기 때문에 문제의 크기가 조금만 커져도 해결하는 시간이 오래 걸립니다. 그래서 성능을 최우선으로 고려했습니다. 또한 실행 시간이 오래 걸리기 때문에, 알고리즘의 실행 도중 일시정지하거나 진행도를 받아오는 기능도 상당히 중요하다고 생각했습니다. 이를 위해서는 알고리즘을 별도의 스레드에서 실행하는 비동기 API가 필요했고, 스레드 안정성을 보장해 주는 Rust가 제격이라고 생각했습니다.&lt;/p&gt;
+&lt;p&gt;그 외에도 평소에 Rust를 강력 추천하고 다니는 러스토랑스 친구 &lt;a href=&quot;https://github.com/yujingaya&quot;&gt;김유진&lt;/a&gt;의 영향으로, 한번쯤 공부해 보고 싶었기 때문이기도 합니다. 기본적인 higher-order function 뿐만 아니라 immutability by default, null safety, ADT와 pattern matching, type class의 경량화 버전인 trait 등 모던 함수형 언어 기능들을 두루 갖추고 있다는 점에 끌렸거든요. 모든 Rust 초심자들이 그렇듯 ownership과 lifetime의 개념이 생소해서 배우는 데 어려움이 있긴 했지만, &lt;a href=&quot;https://doc.rust-lang.org/book/&quot;&gt;공식 안내서&lt;/a&gt;와 컴파일러와 유진이가 친절하게 알려 줘서 금방 적응할 수 있었습니다. 코드를 대충 작성하면 컴파일이 안 된다는 점은 오히려 제 코드의 안전성을 실시간으로 보장해 준다는 느낌을 줘서 안정감 있는 코딩이 가능했습니다.&lt;/p&gt;
+&lt;h2&gt;개발 현황&lt;/h2&gt;
+&lt;p&gt;생각날 때마다 틈틈이 진행한 프로젝트라서 개발 진행은 듬성듬성 이루어졌습니다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2020/05 : 처음으로 dancing links 알고리즘을 구현했습니다.&lt;/li&gt;
+&lt;li&gt;2021/03 : 간단한 API를 만들었습니다.&lt;/li&gt;
+&lt;li&gt;2021/04 : 비동기 API의 디자인을 구상하고, 알고리즘을 별도의 스레드에서 실행하는 솔버를 작성했습니다.&lt;/li&gt;
+&lt;li&gt;2021/12 : 폴리오미노 타일링 문제를 구현했습니다.&lt;/li&gt;
+&lt;li&gt;2022/01 : 이번 설 연휴 동안에는 몇 가지 자잘한 구현과 API 수정을 하고 간단한 documentation을 작성해서 crates.io에 배포했습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;앞으로 구현해야 할 기능이 많습니다. 가장 우선순위가 높은 일은, 같은 부분집합을 여러 번 사용할 수 있는 exact cover의 일반화 문제를 해결하는 것입니다. The Art of Computer Programming에서는 이를 multiplicity의 앞글자를 따서 Algorithm M이라고 부릅니다. 그 외에도 Algorithm C (color), 진행도 계산하기, 대칭 전처리 등 중요한 기능들이 남아있습니다.&lt;/p&gt;
+&lt;p&gt;또한 비동기 API가 메인 목표 중 하나라고 이야기했는데, 지금도 알고리즘이 별도 스레드에서 돌아가기는 하지만 현재는 동기 API만 사용 가능합니다. 아직 구체적인 API의 형태가 잡히지 않았고 위 기능들에 비하면 우선순위가 상대적으로 낮기 때문에 천천히 구현할 생각입니다. 나중에 비동기 API가 완성되면 어떤 고민을 했고 어떻게 디자인했는지를 이야기해보고 싶습니다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;처음 구상한 것보다 규모가 크고 챌린징한 프로젝트가 되었지만, 목적이 확실하고 재미도 있었던 덕분에 여기까지 올 수 있었던 것 같습니다. Rust와 동시성 프로그래밍에 대한 공부가 되어서 유익한 시간이었습니다. 지금까지 Rust로 약 1000줄의 코드를 작성했는데, 이 정도면 저도 Rust 프로그래머라고 당당히 이야기할 수 있지 않을까요? ✌️&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/047680d59abc138e7b91d3b33ee64bac/9239a/exact-cover-tokei.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 43.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABLklEQVQoz22R246EIBBEvV+AQRBFJz442XnY///C2lRP2l2TfehwwKK6GouUIlxeMb/fCK8XpueBefnC95rxjAntPqA3Pfr+/xqGAXVdoyiKT23bDmctmqpCW9eIIcCYAVXTIMQIO1p0bYd5nmGMQQgB27aJEffktm1/DSkcxxHGWhFY5/B4PGDGEZP38JOXy9M0fc6NgXMO1lq5571H13V/E25yUJYlqqqS+CrQkchMoazjkpumuSc8z/MyoCmLIu4luTEXMyFZxyXzrppLcaMmTMduLDIv8TuTc0wakbnSiEzNLWFeV3kHPaBIBXw3JiPTUJlJdXxtehkex3EJWDomRXxf/lWm2fddmM2WZZFmyjq+FA/YnQIm5V9PKUkTGirTkN/IXGOMwjnnm+EPMp/Gvz0zn+oAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;exact-cover Rust 코드 줄 수: 1057 (tokei 프로그램 사용)&quot;
+        title=&quot;exact-cover Rust 코드 줄 수: 1057 (tokei 프로그램 사용)&quot;
+        src=&quot;/static/047680d59abc138e7b91d3b33ee64bac/5a190/exact-cover-tokei.png&quot;
+        srcset=&quot;/static/047680d59abc138e7b91d3b33ee64bac/772e8/exact-cover-tokei.png 200w,
+/static/047680d59abc138e7b91d3b33ee64bac/e17e5/exact-cover-tokei.png 400w,
+/static/047680d59abc138e7b91d3b33ee64bac/5a190/exact-cover-tokei.png 800w,
+/static/047680d59abc138e7b91d3b33ee64bac/c1b63/exact-cover-tokei.png 1200w,
+/static/047680d59abc138e7b91d3b33ee64bac/9239a/exact-cover-tokei.png 1246w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;라이브러리를 구현할 때 &lt;a href=&quot;https://github.com/burr-tools/burr-tools&quot;&gt;Burr Tools의 코드&lt;/a&gt;를 많이 뜯어보고 참고하고 있습니다. Burr Tools에 기여한 과거의 퍼즐러들과, 제 Rust 질문 세례를 받아준 유진이에게 작은 감사를 남깁니다.&lt;/p&gt;</content:encoded><author>queuedq@gmail.com</author></item><item><title><![CDATA[2021년 상반기에 참가한 알고리즘 대회]]></title><description><![CDATA[…]]></description><link>https://blog.queuedlab.com//competitions-2021-first-half</link><guid isPermaLink="false">https://blog.queuedlab.com//competitions-2021-first-half</guid><category><![CDATA[PS]]></category><pubDate>Tue, 18 May 2021 18:06:04 GMT</pubDate><content:encoded>&lt;p&gt;항상 대회가 끝나면 블로그에 후기글을 올려야겠다고 다짐하지만, 요즘 학교 과제와 동아리 일 등으로 바쁘다 보니 장문의 후기글을 쓰는 것이 부담스럽게 다가옵니다. 그래서 우선 참가한 대회 목록이라도 짤막하게 정리해 보려고 합니다. 매년 상반기보다는 하반기에 대회가 더 많이 열리기 때문에, 참가한 대회가 많지는 않습니다.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2&gt;Google Code Jam&lt;/h2&gt;
 &lt;h3&gt;Qualification Round&lt;/h3&gt;
@@ -187,7 +245,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAIB/9oADAMBAAIQAxAAAAG8nyaoWFf/xAAbEAEAAgIDAAAAAAAAAAAAAAACAQMAExESIv/aAAgBAQABBQIk9eDl8e94iN4yywpf/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPwE//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGBAAAwEBAAAAAAAAAAAAAAAAAAEhMYH/2gAIAQEABj8CURiOCppD/8QAHBAAAgIDAQEAAAAAAAAAAAAAAAERITFRYUGR/9oACAEBAAE/IeGl4K7doVGFHAkCVLRnt8FZs8Rg/9oADAMBAAIAAwAAABDkD//EABYRAQEBAAAAAAAAAAAAAAAAAAEAMf/aAAgBAwEBPxBGMv/EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAgEBPxASQ2//xAAbEAEAAgMBAQAAAAAAAAAAAAABABEhMUFRYf/aAAgBAQABPxC0rW2fiVPW59hKYUwK6xK2AOfCBOja7xQoDkjrP//Z&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEAv/EABUBAQEAAAAAAAAAAAAAAAAAAAIB/9oADAMBAAIQAxAAAAG8nyaoWFf/xAAcEAEAAgEFAAAAAAAAAAAAAAACAQMAERITFCL/2gAIAQEAAQUCJO3Q5fHvnER2BllhS//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABgQAAMBAQAAAAAAAAAAAAAAAAABITGB/9oACAEBAAY/AlEYjgqaQ//EABwQAAICAwEBAAAAAAAAAAAAAAABEVEhMWFBkf/aAAgBAQABPyHhpeCzXUKjCjgSRLCo25fBWbPVH//aAAwDAQACAAMAAAAQ5A//xAAWEQEBAQAAAAAAAAAAAAAAAAABADH/2gAIAQMBAT8QRjL/xAAWEQEBAQAAAAAAAAAAAAAAAAABACH/2gAIAQIBAT8QEk2//8QAGxABAAIDAQEAAAAAAAAAAAAAAQARITFBUWH/2gAIAQEAAT8QtK1tn4lTjXPsLTCmBXWIWwBz4QB0bXeKFATKOs//2Q==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
@@ -382,7 +440,7 @@
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgMA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwL/2gAMAwEAAhADEAAAAYyQNJYaz//EABkQAAMBAQEAAAAAAAAAAAAAAAABAgMQEf/aAAgBAQABBQLLN2WvOKnI9G4P/8QAFxEBAQEBAAAAAAAAAAAAAAAAARECEP/aAAgBAwEBPwHKRvP/xAAWEQADAAAAAAAAAAAAAAAAAAAQESL/2gAIAQIBAT8Bpj//xAAZEAABBQAAAAAAAAAAAAAAAAAQAAEREiH/2gAIAQEABj8COPCqP//EABsQAAIDAAMAAAAAAAAAAAAAAAERABAhMWGB/9oACAEBAAE/ISuIIPZxloKNBNi6jgHtf//aAAwDAQACAAMAAAAQ0P8A/8QAFxEBAAMAAAAAAAAAAAAAAAAAARARMf/aAAgBAwEBPxAoaqP/xAAXEQEAAwAAAAAAAAAAAAAAAAABECEx/9oACAECAQE/EEtMj//EABoQAQEBAAMBAAAAAAAAAAAAAAERACFBUeH/2gAIAQEAAT8QUDChwC1oQGXE17IS9jcoHrav3K3f/9k=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgMA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAwL/2gAMAwEAAhADEAAAAYyQNJYaz//EABkQAAMBAQEAAAAAAAAAAAAAAAABAgMQEf/aAAgBAQABBQLLN2WvOKnI9G4P/8QAFxEAAwEAAAAAAAAAAAAAAAAAAQIREP/aAAgBAwEBPwFSsNz/xAAWEQADAAAAAAAAAAAAAAAAAAAQESL/2gAIAQIBAT8Bpj//xAAZEAABBQAAAAAAAAAAAAAAAAAQAAEREiH/2gAIAQEABj8COPCqP//EABsQAAIDAAMAAAAAAAAAAAAAAAERABAhMWGR/9oACAEBAAE/ISuIIPZxloKNBNi6jg9r/9oADAMBAAIAAwAAABCQ/wD/xAAXEQEAAwAAAAAAAAAAAAAAAAABEBEx/9oACAEDAQE/ECBqo//EABcRAQADAAAAAAAAAAAAAAAAAAEQITH/2gAIAQIBAT8QS0yP/8QAGRABAQEBAQEAAAAAAAAAAAAAAREAQXHh/9oACAEBAAE/EFAwocAtaEBl9xNfyEvRogr1tX7lbv/Z&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;

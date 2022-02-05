@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkmain_blog=self.webpackChunkmain_blog||[]).push([[37],{710:function(e,t,n){n.r(t);var r=n(3966),u=n(7378),a=n(7326),i=n(2980),l=n(6265),o=n.n(l),c=function(e){function t(){return e.apply(this,arguments)||this}return(0,r.Z)(t,e),t.prototype.render=function(){return u.createElement(i.Z,null,u.createElement("div",{className:"about-container"},u.createElement(a.q,{title:"About | "+o().siteTitle})))},t}(u.Component);t.default=c}}]);
-//# sourceMappingURL=component---gatsby-theme-queuedlab-src-pages-about-jsx-78e73b9fbf6686779b02.js.map
