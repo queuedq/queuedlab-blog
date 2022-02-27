@@ -19,7 +19,7 @@ const createArticleTagList = (postData: PostData): JSX.Element[] => {
   addTag(metaTags, "article:modified_time", postData.dateModified.toISOString());
   addTag(metaTags, "article:author", config.userName);
   addTag(metaTags, "article:section", postData.category);
-  postData.tags.forEach((tag) => { addTag(metaTags, "article:tag", tag); });
+  postData.tags?.forEach((tag) => { addTag(metaTags, "article:tag", tag); });
 
   return metaTags;
 };
