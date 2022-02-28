@@ -39,8 +39,30 @@
   ol { @include style-ol; }
   a { @include style-link; }
   ul > li:global(.task-list-item) { @include style-task; }
+  
+  // Plugins
   :global(.gatsby-resp-image-wrapper),
   :global(.gatsby-resp-iframe-wrapper) {
     margin: spacing(4) 0;
+  }
+
+  a:global(.preview-notion-container) {
+    box-shadow: none;
+    border: 1px solid $oc-gray-3;
+    border-radius: 4px;
+    &:hover { background: none; }
+
+    & :global(.preview-notion-wrapper) {
+      flex: 4 1 180px;
+      overflow: hidden;
+      width: initial;
+    }
+    & :global(.preview-notion-image-wrapper) {
+      flex: 1 1 120px; // smaller than Notion thumbnail size
+    }
+    & :global(.preview-notion-image) {
+      position: absolute;
+      inset: 0;
+    }
   }
 }
