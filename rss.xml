@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[queuedlab RSS feed]]></title><description><![CDATA[queuedlab RSS feed]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 07 Apr 2022 19:50:16 GMT</lastBuildDate><item><title><![CDATA[라틴 직사각형과 홀의 결혼 정리]]></title><description><![CDATA[일부 칸이 채워진 정사각형 격자의 남은 빈 칸에 수를 마저 채워 넣어서 라틴 방진을 만들 수 있으려면, 처음 상태는 어떤 조건을 만족해야 할까요?]]></description><link>https://blog.queuedlab.com/2022-03-20/latin-rectangle-hall</link><guid isPermaLink="false">https://blog.queuedlab.com/2022-03-20/latin-rectangle-hall</guid><category><![CDATA[CS & Math]]></category><pubDate>Sun, 20 Mar 2022 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 삼성 소프트웨어 멤버십 블로그에 동시 게재되었습니다. 작년 SCPC 수상으로 가입한 삼성 소프트웨어 멤버십에서의 첫 활동입니다!&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[queuedlab RSS feed]]></title><description><![CDATA[queuedlab RSS feed]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 07 Apr 2022 20:04:26 GMT</lastBuildDate><item><title><![CDATA[Horizon 4월의 퍼즐: 라틴 방진을 품은 라틴 방진]]></title><description><![CDATA[라틴 방진 안에 더 작은 라틴 방진을 만들어 봅시다!]]></description><link>https://blog.queuedlab.com/2022-04-01/latin-in-latin-puzzle</link><guid isPermaLink="false">https://blog.queuedlab.com/2022-04-01/latin-in-latin-puzzle</guid><category><![CDATA[Puzzle]]></category><pubDate>Fri, 01 Apr 2022 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;고등과학원 웹진 Horizon에 4월의 퍼즐로 제가 만든 문제가 올라왔습니다! 라틴 방진 안에 작은 라틴 방진을 만드는 간단한(?) 문제입니다. 댓글로 정답을 달면 정답자 한 분을 선정하여 상품도 드리니 한번 도전해 보세요!&lt;/p&gt;
+&lt;p&gt;문제 보러가기: &lt;a href=&quot;https://horizon.kias.re.kr/20689/&quot;&gt;[4월의 퍼즐] 라틴 방진을 품은 라틴 방진&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 517px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6d2527e7b7ee8140818c3bced8c53abd/fa2f5/latin-in-latin-01.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 98.50000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAADUUlEQVQ4y2VUZ2/bSBDl//8DBvw1uFySc86QKcixrB5ZshE1U5WqVrMKVcIiRpUveGssIScDDDizO5ydN025uLiwb29vbVVV7ZubGzsQCAg9FAr9pVPmWTAYFF/JPA+Hw/bl5aWj9Pt9WJaFSqUCSdPpFIPBwNcNw8DLy4uvNxoNtNttX+/1ehiPx+I/Rdd1T9M0LxaLeQAEj0YjL5vN+vr19bWnqje+nkgkvGAw6Ov5fN6LRCJep9PxlHq9LrwzAs/zcDweBW82G/F1HAfr1Rqz2Ry27cDduMKeCFzXFTavr6/CrtVqQdE0zQ99t9vhcDhgv98L3bJNFLpPaK9qaC2rqE6KqE1LqM80oZeHBRgL410qFHodDodIJpP+RalUwtPTEw7HPZqmhnBRRbzyDWN0MDy1hBxIf0HXrcG0TUSjURApUSpMbjabxdXVle/w+fkZ0WgM2/0W+lpDWo8iWb3H4NDE6NjGVfQj/k98Qm9Th2n9RDqdRiqVEsVRyuWyD5dQmcf1ei3yY28saNMcetsG2k5VcNetIz/MoDzPiccWSwO2bYtcNptNKGwXOqEz5o98Op3EI6b9E9rkB1pWGW27grbzxv1dE4N9E/VlCTNj9j6H9MqKRSIR/+Lu7g7p9AMOpwNqiyISlTv8F/0H/Z2O4bGFVO0eauYrem4DzsbG99R3FItFjEajN4fErqqq7/Dx8RHJRBK/di5aZhmf7z/ga/xfjL2OyKM2+4FvuQBefjVgOxaCalAUkcVVqtWqgLzdbgVc5uKtv06wHAuFwSOq8wIay2cBkdw2K2iZFZQnOcz/hPxnUeiUxO92t4WxNDCejDAY9mEs51isDAxGfbxOxlisFiKQ1WolAtF1HUqn00G320Uul/Nfosw2kJRKplAoFM4i0UXeJDGofD7/1jbMIZcDvUuKx+OiWUlMBx9IJBL+PTsjFov5Om35v2hsCVmOnIR83kqEJcdSzjfPKPOMkPkVkFkUEo1owB40TVPolOWioEPpQAYgdTn7wiFnmaPD3juf5fPZ5gI5v89kMgiFQu/ajM5E27AgTOZ5ER4eHnC+hWjDeT8vGm0kzedzAZtrTeFLrDShc2Owl7gcmFvKZMryTm4V/kNZnjOocDiM39Rdsjd0DEYPAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;latin in latin 01&quot;
+        title=&quot;latin in latin 01&quot;
+        src=&quot;/static/6d2527e7b7ee8140818c3bced8c53abd/fa2f5/latin-in-latin-01.png&quot;
+        srcset=&quot;/static/6d2527e7b7ee8140818c3bced8c53abd/772e8/latin-in-latin-01.png 200w,
+/static/6d2527e7b7ee8140818c3bced8c53abd/e17e5/latin-in-latin-01.png 400w,
+/static/6d2527e7b7ee8140818c3bced8c53abd/fa2f5/latin-in-latin-01.png 517w&quot;
+        sizes=&quot;(max-width: 517px) 100vw, 517px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded><author>queuedq@gmail.com</author></item><item><title><![CDATA[라틴 직사각형과 홀의 결혼 정리]]></title><description><![CDATA[일부 칸이 채워진 정사각형 격자의 남은 빈 칸에 수를 마저 채워 넣어서 라틴 방진을 만들 수 있으려면, 처음 상태는 어떤 조건을 만족해야 할까요?]]></description><link>https://blog.queuedlab.com/2022-03-20/latin-rectangle-hall</link><guid isPermaLink="false">https://blog.queuedlab.com/2022-03-20/latin-rectangle-hall</guid><category><![CDATA[CS & Math]]></category><pubDate>Sun, 20 Mar 2022 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 삼성 소프트웨어 멤버십 블로그에 동시 게재되었습니다. 작년 SCPC 수상으로 가입한 삼성 소프트웨어 멤버십에서의 첫 활동입니다!&lt;/p&gt;
 &lt;p&gt;원문: &lt;a href=&quot;http://www.secmem.org/blog/2022/03/20/latin-rectangle-hall/&quot;&gt;http://www.secmem.org/blog/2022/03/20/latin-rectangle-hall/&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2&gt;라틴 방진과 스도쿠&lt;/h2&gt;
