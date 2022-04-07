@@ -1,3 +1,4 @@
+const url = require("url");
 const config = require("./data/site-config");
 
 // Make sure that pathPrefix is not empty
@@ -109,12 +110,6 @@ module.exports = {
     {
       resolve: "gatsby-plugin-feed",
       options: {
-        setup(ref) {
-          const ret = ref.query.site.siteMetadata.rssMetadata;
-          ret.allMarkdownRemark = ref.query.allMarkdownRemark;
-          ret.generator = "GatsbyJS Advanced Starter";
-          return ret;
-        },
         query: `
         {
           site {
@@ -129,51 +124,42 @@ module.exports = {
               }
             }
           }
-        }
-      `,
+        }`,
         feeds: [
           {
-            serialize(ctx) {
-              const { rssMetadata } = ctx.query.site.siteMetadata;
-              return ctx.query.allMarkdownRemark.edges.map(edge => ({
-                categories: edge.node.frontmatter.tags,
-                date: edge.node.frontmatter.date,
-                title: edge.node.frontmatter.title,
-                description: edge.node.excerpt,
-                url: rssMetadata.site_url + edge.node.fields.slug,
-                guid: rssMetadata.site_url + edge.node.fields.slug,
+            serialize({ query: { site, allBlogPost } }) {
+              return allBlogPost.edges.map(edge => ({
+                categories: [edge.node.category],
+                title: edge.node.title,
+                date: edge.node.date,
+                description: edge.node.summary || edge.node.excerpt,
+                url: new url.URL(edge.node.url, site.siteMetadata.rssMetadata.site_url).href,
+                guid: new url.URL(edge.node.url, site.siteMetadata.rssMetadata.site_url).href,
                 custom_elements: [
-                  { "content:encoded": edge.node.html },
+                  { "content:encoded": edge.node.body },
                   { author: config.userEmail }
-                ]
+                ],
               }));
             },
             query: `
             {
-              allMarkdownRemark(
+              allBlogPost(
                 limit: 1000,
-                sort: { order: DESC, fields: [frontmatter___date] },
+                sort: { order: DESC, fields: [date] },
               ) {
                 edges {
                   node {
+                    title
+                    body
+                    date
+                    url
+                    summary
                     excerpt
-                    html
-                    timeToRead
-                    fields {
-                      slug
-                    }
-                    frontmatter {
-                      title
-                      cover
-                      date
-                      category
-                      tags
-                    }
+                    category
                   }
                 }
               }
-            }
-          `,
+            }`,
             output: config.siteRss,
             title: config.siteRssTitle
           }
