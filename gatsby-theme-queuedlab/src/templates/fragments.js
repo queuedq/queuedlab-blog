@@ -7,6 +7,7 @@ fragment PostMetadata on RemarkBlogPost {
   body
   slug
   date
+  url
   category
   tags
   summary

@@ -25,18 +25,15 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   const typeDefs = `
     type MarkdownRemark implements Node {
       frontmatter: Frontmatter
-      fields: Fields
     }
     type Frontmatter {
       title: String!
+      slug: String!
       date: Date!
       category: String
       tags: [String!]
       cover: String
       summary: String
-    }
-    type Fields {
-      slug: String!
     }
   `
   createTypes(typeDefs)
@@ -58,6 +55,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
       },
       slug: { type: "String!" },
       date: { type: "Date!", extensions: { dateformat: {} } },
+      url: { type: "String!" },
       category: { type: "String" },
       tags: { type: "[String!]" },
       cover: { type: "File", extensions: { fileByRelativePath: {} } },
@@ -80,48 +78,26 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
   createTypes(RemarkBlogPost);
 }
 
-exports.onCreateNode = async ({ node, actions, getNode, createNodeId, createContentDigest }) => {
-  const { createNodeField, createNode } = actions;
-  let slug;
-  if (node.internal.type === "MarkdownRemark") {
-    // TODO: Don't extend MarkdownRemark
-    const fileNode = getNode(node.parent);
-    const parsedFilePath = path.parse(fileNode.relativePath);
-    if (
-      Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
-      Object.prototype.hasOwnProperty.call(node.frontmatter, "title")
-    ) {
-      slug = `/${_.kebabCase(node.frontmatter.title)}`;
-    } else if (parsedFilePath.name !== "index" && parsedFilePath.dir !== "") {
-      slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
-    } else if (parsedFilePath.dir === "") {
-      slug = `/${parsedFilePath.name}/`;
-    } else {
-      slug = `/${parsedFilePath.dir}/`;
-    }
+exports.onCreateNode = async ({ node, actions, createNodeId, createContentDigest }) => {
+  const { createNode } = actions;
 
-    if (Object.prototype.hasOwnProperty.call(node, "frontmatter")) {
-      if (Object.prototype.hasOwnProperty.call(node.frontmatter, "slug"))
-        slug = `/${_.kebabCase(node.frontmatter.slug)}`;
-      if (Object.prototype.hasOwnProperty.call(node.frontmatter, "date")) {
-        const date = moment(node.frontmatter.date);
-        if (!date.isValid())
-          console.warn(`WARNING: Invalid date.`, node.frontmatter);
-      }
-    }
-    createNodeField({ node, name: "slug", value: slug });
+  if (node.internal.type === "MarkdownRemark") {
+    const { slug } = node.frontmatter;
+    const date = moment(node.frontmatter.date).format('YYYY-MM-DD');
+    const url = `/${date}/${slug}`;
 
     // Create nodes for custom types
     const remarkBlogPostId = createNodeId(`${node.id} >>> RemarkBlogPost`);
     const fieldData = {
       title: node.frontmatter.title,
-      slug,
+      slug: node.frontmatter.slug,
       date: node.frontmatter.date,
       category: node.frontmatter.category,
       tags: node.frontmatter.tags,
       cover: node.frontmatter.cover,
       coverAlt: node.frontmatter.coverAlt,
       summary: node.frontmatter.summary,
+      url,
     };
   
     await createNode({
@@ -143,36 +119,32 @@ exports.createPages = async ({ graphql, actions }) => {
   const categoryPage = require.resolve("./src/templates/Category.tsx");
   const allPostsPage = require.resolve("./src/templates/AllPosts.tsx");
 
-  // Get a full list of markdown posts
-  const markdownQueryResult = await graphql(`
+  // Get a full list of posts
+  const blogPostsQueryResult = await graphql(`
     {
-      allMarkdownRemark {
+      allBlogPost {
         edges {
           node {
-            fields {
-              slug
-            }
-            frontmatter {
-              title
-              tags
-              category
-              date
-            }
+            url
+            title
+            tags
+            category
+            date
           }
         }
       }
     }
   `);
 
-  if (markdownQueryResult.errors) {
-    console.error(markdownQueryResult.errors);
-    throw markdownQueryResult.errors;
+  if (blogPostsQueryResult.errors) {
+    console.error(blogPostsQueryResult.errors);
+    throw blogPostsQueryResult.errors;
   }
 
   const tagSet = new Set();
   const categorySet = new Set();
 
-  const postsEdges = markdownQueryResult.data.allMarkdownRemark.edges;
+  const postsEdges = blogPostsQueryResult.data.allBlogPost.edges;
 
   // Pagination
   const { postsPerPage } = siteConfig;
@@ -202,35 +174,24 @@ exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
-  // Post page creating
+  // Create post pages
   postsEdges.forEach((edge, index) => {
     // Generate a list of tags
-    if (edge.node.frontmatter.tags) {
-      edge.node.frontmatter.tags.forEach((tag) => {
-        tagSet.add(tag);
-      });
+    if (edge.node.tags) {
+      edge.node.tags.forEach(tag => tagSet.add(tag));
     }
 
     // Generate a list of categories
-    if (edge.node.frontmatter.category) {
-      categorySet.add(edge.node.frontmatter.category);
+    if (edge.node.category) {
+      categorySet.add(edge.node.category);
     }
 
     // Create post pages
-    const nextID = index + 1 < postsEdges.length ? index + 1 : 0;
-    const prevID = index - 1 >= 0 ? index - 1 : postsEdges.length - 1;
-    const nextEdge = postsEdges[nextID];
-    const prevEdge = postsEdges[prevID];
-
     createPage({
-      path: edge.node.fields.slug,
+      path: edge.node.url,
       component: postPage,
       context: {
-        slug: edge.node.fields.slug,
-        nexttitle: nextEdge.node.frontmatter.title,
-        nextslug: nextEdge.node.fields.slug,
-        prevtitle: prevEdge.node.frontmatter.title,
-        prevslug: prevEdge.node.fields.slug,
+        url: edge.node.url,
       },
     });
   });

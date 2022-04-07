@@ -1,9 +1,9 @@
 ---
 title: "Big Test"
+slug: test-05
 cover: "5.jpg"
 category: "moar"
 date: 2018-02-28T15:00:00.000Z
-slug: "Big-Sample_Test"
 tags:
     - test
     - huge

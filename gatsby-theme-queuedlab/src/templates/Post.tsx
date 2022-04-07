@@ -19,8 +19,8 @@ const PostTemplate = ({ data }) => {
 export default PostTemplate;
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    remarkBlogPost(slug: { eq: $slug }) {
+  query BlogPostByUrl($url: String!) {
+    remarkBlogPost(url: { eq: $url }) {
       ...PostMetadata
     }
   }

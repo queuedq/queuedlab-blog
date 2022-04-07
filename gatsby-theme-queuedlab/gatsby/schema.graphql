@@ -4,6 +4,7 @@ interface BlogPost implements Node {
   body: String!
   slug: String!
   date: Date!
+  url: String!
   category: String
   tags: [String!]
   cover: File

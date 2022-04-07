@@ -17,7 +17,7 @@ export type Post = {
 export const postDescription = (post: Post) => post.summary || post.excerpt;
 
 export function fromRemarkPost(node): Post {
-  const { title, body, slug, date, category, tags, summary, excerpt } = node;
+  const { title, body, slug, date, url, category, tags, summary, excerpt } = node;
   return {
     title,
     body,
@@ -28,9 +28,7 @@ export function fromRemarkPost(node): Post {
     category,
     tags,
     slug,
-    url: slug,
-    // TODO: use appropriate url (generate at gatsby-node.js)
-    // because we might end up using urls like "/date/slug"
+    url,
   };
 }
 
