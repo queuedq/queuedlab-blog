@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[queuedlab RSS feed]]></title><description><![CDATA[queuedlab RSS feed]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 07 Apr 2022 20:04:26 GMT</lastBuildDate><item><title><![CDATA[Horizon 4월의 퍼즐: 라틴 방진을 품은 라틴 방진]]></title><description><![CDATA[라틴 방진 안에 더 작은 라틴 방진을 만들어 봅시다!]]></description><link>https://blog.queuedlab.com/2022-04-01/latin-in-latin-puzzle</link><guid isPermaLink="false">https://blog.queuedlab.com/2022-04-01/latin-in-latin-puzzle</guid><category><![CDATA[Puzzle]]></category><pubDate>Fri, 01 Apr 2022 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;고등과학원 웹진 Horizon에 4월의 퍼즐로 제가 만든 문제가 올라왔습니다! 라틴 방진 안에 작은 라틴 방진을 만드는 간단한(?) 문제입니다. 댓글로 정답을 달면 정답자 한 분을 선정하여 상품도 드리니 한번 도전해 보세요!&lt;/p&gt;
-&lt;p&gt;문제 보러가기: &lt;a href=&quot;https://horizon.kias.re.kr/20689/&quot;&gt;[4월의 퍼즐] 라틴 방진을 품은 라틴 방진&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[queuedlab RSS feed]]></title><description><![CDATA[queuedlab RSS feed]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 08 Apr 2022 06:08:23 GMT</lastBuildDate><item><title><![CDATA[Horizon 4월의 퍼즐: 라틴 방진을 품은 라틴 방진]]></title><description><![CDATA[라틴 방진 안에 더 작은 라틴 방진을 만들어 봅시다!]]></description><link>https://blog.queuedlab.com/2022-04-01/latin-in-latin-puzzle</link><guid isPermaLink="false">https://blog.queuedlab.com/2022-04-01/latin-in-latin-puzzle</guid><category><![CDATA[Puzzle]]></category><pubDate>Fri, 01 Apr 2022 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 517px; &quot;
     &gt;
@@ -29,7 +27,17 @@
         decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;</content:encoded><author>queuedq@gmail.com</author></item><item><title><![CDATA[라틴 직사각형과 홀의 결혼 정리]]></title><description><![CDATA[일부 칸이 채워진 정사각형 격자의 남은 빈 칸에 수를 마저 채워 넣어서 라틴 방진을 만들 수 있으려면, 처음 상태는 어떤 조건을 만족해야 할까요?]]></description><link>https://blog.queuedlab.com/2022-03-20/latin-rectangle-hall</link><guid isPermaLink="false">https://blog.queuedlab.com/2022-03-20/latin-rectangle-hall</guid><category><![CDATA[CS & Math]]></category><pubDate>Sun, 20 Mar 2022 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 삼성 소프트웨어 멤버십 블로그에 동시 게재되었습니다. 작년 SCPC 수상으로 가입한 삼성 소프트웨어 멤버십에서의 첫 활동입니다!&lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;2022년 1월부터 저희 KPP (Korean Puzzle Party)가 박부성 교수님을 이어 받아 &lt;a href=&quot;https://horizon.kias.re.kr/&quot;&gt;고등과학원 웹진 Horizon&lt;/a&gt;에 매달 퍼즐을 연재하게 되었습니다!&lt;/p&gt;
+&lt;p&gt;Horizon 4월의 퍼즐로 제가 만든 문제, &quot;라틴 방진을 품은 라틴 방진&quot;이 올라왔습니다. 라틴 방진 안에 작은 라틴 방진을 만드는 간단한(?) 문제입니다. 댓글로 정답을 달면 정답자 한 분을 선정하여 상품도 드리니 한 번 도전해 보세요!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;문제 보러가기: &lt;a href=&quot;https://horizon.kias.re.kr/20689/&quot;&gt;[4월의 퍼즐] 라틴 방진을 품은 라틴 방진&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;지난 퍼즐들:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://horizon.kias.re.kr/19828/&quot;&gt;[1월의 퍼즐] 유일해 스도쿠&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://horizon.kias.re.kr/20097/&quot;&gt;[2월의 퍼즐] 뾰족한 별팔면체의 전개도&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://horizon.kias.re.kr/20341/&quot;&gt;[3월의 퍼즐] 정보가 부족해 보이는 퍼즐&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded><author>queuedq@gmail.com</author></item><item><title><![CDATA[라틴 직사각형과 홀의 결혼 정리]]></title><description><![CDATA[일부 칸이 채워진 정사각형 격자의 남은 빈 칸에 수를 마저 채워 넣어서 라틴 방진을 만들 수 있으려면, 처음 상태는 어떤 조건을 만족해야 할까요?]]></description><link>https://blog.queuedlab.com/2022-03-20/latin-rectangle-hall</link><guid isPermaLink="false">https://blog.queuedlab.com/2022-03-20/latin-rectangle-hall</guid><category><![CDATA[CS & Math]]></category><pubDate>Sun, 20 Mar 2022 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이 글은 삼성 소프트웨어 멤버십 블로그에 동시 게재되었습니다. 작년 SCPC 수상으로 가입한 삼성 소프트웨어 멤버십에서의 첫 활동입니다!&lt;/p&gt;
 &lt;p&gt;원문: &lt;a href=&quot;http://www.secmem.org/blog/2022/03/20/latin-rectangle-hall/&quot;&gt;http://www.secmem.org/blog/2022/03/20/latin-rectangle-hall/&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2&gt;라틴 방진과 스도쿠&lt;/h2&gt;
