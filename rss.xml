@@ -1,4 +1,113 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[queuedlab RSS feed]]></title><description><![CDATA[queuedlab RSS feed]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 08 Apr 2022 06:08:23 GMT</lastBuildDate><item><title><![CDATA[Horizon 4월의 퍼즐: 라틴 방진을 품은 라틴 방진]]></title><description><![CDATA[라틴 방진 안에 더 작은 라틴 방진을 만들어 봅시다!]]></description><link>https://blog.queuedlab.com/2022-04-01/latin-in-latin-puzzle</link><guid isPermaLink="false">https://blog.queuedlab.com/2022-04-01/latin-in-latin-puzzle</guid><category><![CDATA[Puzzle]]></category><pubDate>Fri, 01 Apr 2022 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[queuedlab RSS feed]]></title><description><![CDATA[queuedlab RSS feed]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 11 Apr 2022 10:14:53 GMT</lastBuildDate><item><title><![CDATA[Canal 퍼즐]]></title><description><![CDATA[2021년 4월 제작]]></description><link>https://blog.queuedlab.com/2022-04-09/canal-puzzle</link><guid isPermaLink="false">https://blog.queuedlab.com/2022-04-09/canal-puzzle</guid><category><![CDATA[Puzzle]]></category><pubDate>Sat, 09 Apr 2022 11:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/2ad350beff68c5b919883599d6e35c5a/a878e/Canal.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 135.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAbCAIAAADzvTiPAAAACXBIWXMAAAsTAAALEwEAmpwYAAADNElEQVQ4y6WV+W/bNhTH++8PW4cm2RBsbTFsPxXZFiwrdhRpAqdNtiapnaTLYeeyLeuiKJGUKPEQr0Gyk6ZbMQfYwxcERb6P+Pj4KD1w/8MeOOdSZlPmSukQd7V2ynzgYW0zoozT1plWyjhjbuBr4tZH7vml24/dOXZXpAEarIWZakZGufsLNp5XxPUzF9IbWAjBOBeiEeeS8aZXMda0VSWlrBivGKNcUCaKihdlZdrXNzBCeOz5YRSHUewHYRBGEz/w/CBoH8Mo9iY+SODED4ajse8HfhCYNu4GJiRvXMMIJLDhwyiKgTcJroYjz/dhmoEEggTGAMZtJ4qBkHIGU1omCcyyLIEQplkYxQAkMUjCGDDOtTFKKSGkUsq0Nu3M4LpWnEshJRdSyFrImgtZMWFnebOztLtZtu3doypoCSBKMpykCKSoaSHKcmrzwmz/ad4dW62ds8NCP+3XX53Vm0FtbxNGyyrJcIoIvFGSYVxWBmG9vqE3Ompr252cXBTuYd8tDNyjM/s61ndh1GAZnipJEaKlJYV7tddo47U9PK4rTLxePn6LwLBU7g6c/gPGJC9pXXbR4R7q9UnfKuvQpesuuv3P3fWLaRKme65AimDWRDtVnKIir8IaLpHVh/jZKt1qfPHQHDw23WUzemVvYVoykOJbGGYYTGEJl9APC2jlMVo7kmOXXZr9R2Z/0Rx9Y9PBTZEUNElRivMUkUY4h4jkeUl11eODHh/ssZPT2nOc2LhnwZENd212MYOnR28/tPteyX9bQYsMIReGJApAmtCCzKrFmvf6KKy0YUKVTArKWMmDXIzzupJ67spNtCUCvP+bPP9dDH5lw+2Vq/rTY30a0/eF+nG4nWWpZ3rL9mDZdRfV6cqzC/7JO3sO+Ty4XblKfX34xBw+sQfL5mxt5UJ/1sfnGbn9tvwnnHmm+63d+kXtvrwOe995wRLoXNBhO23nwAVBdHfLrnfUm95P5I8v89Wv8dp5MZkHt5sqYSY7O/blpnqzv4o6C/n3X+AfB4V3L5iGkd7suM1Ovft2Jzv6GW8/RzvjPJ4bdnvOQhpMHCamKFStdK211Erp+1bYPf8YfwPOgPlSDd1LpAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Canal&quot;
+        title=&quot;Canal&quot;
+        src=&quot;/static/2ad350beff68c5b919883599d6e35c5a/5a190/Canal.png&quot;
+        srcset=&quot;/static/2ad350beff68c5b919883599d6e35c5a/772e8/Canal.png 200w,
+/static/2ad350beff68c5b919883599d6e35c5a/e17e5/Canal.png 400w,
+/static/2ad350beff68c5b919883599d6e35c5a/5a190/Canal.png 800w,
+/static/2ad350beff68c5b919883599d6e35c5a/c1b63/Canal.png 1200w,
+/static/2ad350beff68c5b919883599d6e35c5a/29007/Canal.png 1600w,
+/static/2ad350beff68c5b919883599d6e35c5a/a878e/Canal.png 2048w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Canal (2021, designed by me)&lt;/p&gt;
+&lt;p&gt;Place the four pieces inside the grid so that the empty cells form a single path between the two circles.&lt;/p&gt;
+&lt;p&gt;I made this puzzle a year ago. I wanted to release it after I&apos;ve verified the uniqueness of the solution, but I couldn&apos;t afford the time to do so. I&apos;d appreciate it if anyone can verify the uniqueness.&lt;/p&gt;
+&lt;p&gt;UPD: George Sicherman and Symen Wórld independently analyzed this puzzle and confirmed that the solution is unique. I really appreciate it!&lt;/p&gt;
+&lt;p&gt;(If anyone&apos;s interested in getting a hint or manufacturing a physical version, please DM me!)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.facebook.com/queuedq/posts/1692992187717304&quot;&gt;원문 (Facebook)&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;기타 이미지&lt;/h2&gt;
+&lt;p&gt;가로 이미지&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1de65fb01eee8efd83125a2dc5c40e4a/dcef9/Canal_Landscape.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAIAAAA7N+mxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABqElEQVQoz3WSTW/UMBCG++MRBw5InEAVHDiChMSlB1QELdCvTbWoagsCSmHZTWwnThzHH7FjewZ5V6tyYTSH19Y8ntdj74SE3GLv0AaMgJuIgC7m9Ov8X+yEhNcNXNawGkB7QADELCqVd4gGZmBzZkoRwpRCSClt4RAaRjpe14wRSpdltSwrSlnNGCVVuSoHKTelekpOOS2VtvYOJpSxmhPKCGOrsqINV8ZIOSiltBqsHRFxcqNbFrD49Kf6/eIXCuMznACMddqMxjql7eg8Oo9TQEQTkTuMa9feDHH+GE/v3V4dPfyKXI/rzjHWbc8aUbc9bTqpLc4v0vEMCXlP4cE1HpJ8QzcOYf4KZ3vF8vIJuehcl+EYI+9k0/ZcyJoLpW28uZmOT+DL96H+Sb4d0JYj4mitOzyaPpw97948Ei/bUW5hIeu2551kXGg97pvimdxrYcTFAZzeR3GbO2udTmbhfH7WX72Tc+XMP7a5aLpsWyv71pzviteF+4FlAZ+fwuJjnizkt8IEWWy/Qx6Yc977yU+T91OIMWEKEDwEhCwxurvyrAC2y792WjNRrN7u0wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Canal Landscape&quot;
+        title=&quot;Canal Landscape&quot;
+        src=&quot;/static/1de65fb01eee8efd83125a2dc5c40e4a/5a190/Canal_Landscape.png&quot;
+        srcset=&quot;/static/1de65fb01eee8efd83125a2dc5c40e4a/772e8/Canal_Landscape.png 200w,
+/static/1de65fb01eee8efd83125a2dc5c40e4a/e17e5/Canal_Landscape.png 400w,
+/static/1de65fb01eee8efd83125a2dc5c40e4a/5a190/Canal_Landscape.png 800w,
+/static/1de65fb01eee8efd83125a2dc5c40e4a/c1b63/Canal_Landscape.png 1200w,
+/static/1de65fb01eee8efd83125a2dc5c40e4a/29007/Canal_Landscape.png 1600w,
+/static/1de65fb01eee8efd83125a2dc5c40e4a/dcef9/Canal_Landscape.png 3200w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;출력용 이미지 — 조각을 자른 뒤 반 접고 풀로 붙여서 사용하세요.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f90090ff54ffb0b43e2072c7862d7e52/a878e/Canal_Printable.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+0lEQVQoz42T7W8SQRDG+9dX/aImNC3QaKLfGmNrUWMQ5IAYjQGP3hULaHsItLwcdzt7r3B3u7PmjpdCYq2TJ5vsZH777E5md8T/BGKszUSy7vwL8X1sdbA/WJTqMy4NWfGGtYAt+J07rYRAAjxf5JXP7KItrgdtyneV6IEapdtRO+FjmDEeRFG4qTAKOSJQLlVRqrAPBSHLvyz+tBntX0S7SvTm9wp2PF83YQrWlNBEVrylNifASxUuVVmxLFS1Y+GjH/iwiS+v+NDjK9j1dIMYhE5NWEg3CLgeAmVShZXKLF8QskL92Xl/pPSGNyaIdcMc19dNaixt6eIU4rgIlihUxJeauB4LcARoQs0K5UD0SjxpzB3OJoDlzufeoHfeH3d0tDDun8bkNKvv8a4ktmATDGKtnXUTHMsfRWbGfZ+yT3J2NS4GDRsZlNP48y3OYKtha3hK6MQEx/ZHoZGF0304PrKKE+4K6GIjjcozrKdQKyxhajtjg0wTQz259tggtuWNQiNDc1maS5FXJ95XQTTeSPOzQ66+wIm6hIMwnM2DIAjnK82CACMcheYhzWXo6XP6rhZcCujysyyXD3DzzX8ZsGR4h6GxB68fk6NjuxxnySX/nuK1J6h9vIW3Z/527oE5n9x63v1W91tx0p2gVsSrPOpNce/HuDf+AHitQ28DecSSAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Canal Printable&quot;
+        title=&quot;Canal Printable&quot;
+        src=&quot;/static/f90090ff54ffb0b43e2072c7862d7e52/5a190/Canal_Printable.png&quot;
+        srcset=&quot;/static/f90090ff54ffb0b43e2072c7862d7e52/772e8/Canal_Printable.png 200w,
+/static/f90090ff54ffb0b43e2072c7862d7e52/e17e5/Canal_Printable.png 400w,
+/static/f90090ff54ffb0b43e2072c7862d7e52/5a190/Canal_Printable.png 800w,
+/static/f90090ff54ffb0b43e2072c7862d7e52/c1b63/Canal_Printable.png 1200w,
+/static/f90090ff54ffb0b43e2072c7862d7e52/29007/Canal_Printable.png 1600w,
+/static/f90090ff54ffb0b43e2072c7862d7e52/a878e/Canal_Printable.png 2048w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded><author>queuedq@gmail.com</author></item><item><title><![CDATA[Horizon 4월의 퍼즐: 라틴 방진을 품은 라틴 방진]]></title><description><![CDATA[라틴 방진 안에 더 작은 라틴 방진을 만들어 봅시다!]]></description><link>https://blog.queuedlab.com/2022-04-01/latin-in-latin-puzzle</link><guid isPermaLink="false">https://blog.queuedlab.com/2022-04-01/latin-in-latin-puzzle</guid><category><![CDATA[Puzzle]]></category><pubDate>Fri, 01 Apr 2022 09:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 517px; &quot;
     &gt;
