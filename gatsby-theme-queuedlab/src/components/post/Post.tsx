@@ -5,7 +5,7 @@ import { Post } from "../../models/post";
 import { formatDate } from "../../utils/date";
 import PostTags from "./PostTags";
 import * as style from "./Post.module.scss";
-import "./b16-tomorrow-dark.scss";
+import "./prism-xonokai.css";
 import "katex/dist/katex.min.css";
 
 type PostComponentProps = {
