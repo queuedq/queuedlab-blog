@@ -1,7 +1,6 @@
 /* eslint "no-console": "off" */
 
 const fs = require("fs");
-const path = require("path");
 const _ = require("lodash");
 const moment = require('moment-timezone');
 const { parentResolverPassthrough } = require('./gatsby/utils');
@@ -175,7 +174,7 @@ exports.createPages = async ({ graphql, actions }) => {
   });
 
   // Create post pages
-  postsEdges.forEach((edge, index) => {
+  postsEdges.forEach((edge, _index) => {
     // Generate a list of tags
     if (edge.node.tags) {
       edge.node.tags.forEach(tag => tagSet.add(tag));
