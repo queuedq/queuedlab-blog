@@ -47,7 +47,6 @@ module.exports = {
               maxWidth: 800
             }
           },
-          "gatsby-remark-link-card",
           {
             resolve: "gatsby-remark-embed-video",
             options: {

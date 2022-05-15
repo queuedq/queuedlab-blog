@@ -30,7 +30,6 @@
     "gatsby-remark-embed-video": "^3.0.10",
     "gatsby-remark-images": "^5.8.0",
     "gatsby-remark-katex": "^5.8.0",
-    "gatsby-remark-link-card": "^1.0.3",
     "gatsby-remark-prismjs": "^5.8.0",
     "gatsby-remark-relative-images": "^2.0.2",
     "gatsby-remark-responsive-iframe": "^4.8.0",

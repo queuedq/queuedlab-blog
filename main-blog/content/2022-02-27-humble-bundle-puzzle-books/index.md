@@ -7,7 +7,7 @@ date: 2022-02-27T18:00:00+09:00
 category: Puzzle
 ---
 
-[$card](https://www.humblebundle.com/books/math-puzzles-train-your-brain-taylor-francis-books)
+[Math & Puzzles: Train Your Brain](https://www.humblebundle.com/books/math-puzzles-train-your-brain-taylor-francis-books)
 
 험블 번들에서 [Taylor & Francis](https://taylorandfrancis.com/) 출판사의 퍼즐 책 PDF 17권 묶음을 단돈 $18에 판매하고 있네요!!
 
