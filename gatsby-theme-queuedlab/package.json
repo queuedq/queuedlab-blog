@@ -40,7 +40,7 @@
     "katex": "^0.13.13",
     "lodash": "^4.17.19",
     "moment": "^2.26.0",
-    "moment-timezone": "^0.5.31",
+    "moment-timezone": "^0.5.35",
     "prismjs": "^1.27.0",
     "react-disqus-comments": "^1.4.0",
     "react-helmet": "^6.0.0",
