@@ -1,10 +1,16 @@
 ---
-title: Kirchhoff's Theorem
+title: Kirchhoff's Theorem (Matrix-Tree Theorem)
 summary: >-
   그래프의 스패닝 트리의 개수를 세는 두 가지 정리, Cayley’s formula와 Kirchhoff’s theorem에 대해 소개합니다.
 slug: kirchhoffs-theorem
 date: 2022-09-18T23:00:00+09:00
 category: CS & Math
+---
+
+이 글은 삼성 소프트웨어 멤버십 블로그에 동시 게재되었습니다.
+
+원문: [https://www.secmem.org/blog/2022/09/18/kirchhoffs-theorem/](https://www.secmem.org/blog/2022/09/18/kirchhoffs-theorem/)
+
 ---
 
 이번 글에서는 그래프의 스패닝 트리의 개수를 세는 두 가지 정리, Cayley’s formula와 Kirchhoff’s theorem에 대해 소개합니다.
