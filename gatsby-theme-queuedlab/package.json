@@ -35,7 +35,7 @@
     "gatsby-remark-responsive-iframe": "^4.8.0",
     "gatsby-remark-table-of-contents": "1.0.0",
     "gatsby-source-filesystem": "^3.11.0",
-    "gatsby-transformer-remark": "^4.8.0",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^3.11.0",
     "katex": "^0.13.13",
     "lodash": "^4.17.19",
